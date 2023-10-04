@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 키워드 사용 연습문제</title>
+    <script>
+        class Rectangle{
+            constructor(width, height){
+                this.width = width;
+                this.height = height;
+            }
+
+            // Getters
+            get width(){
+                return this._width;
+            }
+            get height(){
+                return this._height;
+            }
+
+            // Setters
+            set width(width){
+                this._width = width;
+            }
+            set height(height){
+                this._height = height;
+            }
+
+            // method
+            getArea(){
+                return this.width*this.height;
+            }
+        }
+        let square = new Rectangle(30, 10);
+        console.log(`가로길이 : ${square.width}, 세로길이 : ${square.height}`)
+        console.log('사각형의 넓이 : '+square.getArea());
+        square.width = 20;
+        square.height = 30;
+        console.log('사각형의 넓이 : '+square.getArea());
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

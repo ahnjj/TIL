@@ -1,0 +1,111 @@
+/* 맨처음 설정해 줄것 */
+#wrap {
+    text-align: center;
+    margin: 0 auto; /*가운데 정렬*/
+    width: 800px
+}
+
+#mainMenuBox {
+    height: 35px;
+    line-height: 35px; /* 줄 간격 - 수직으로 가우데 정렬 효과*/
+    background-color: grey;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#mainMenuBox ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#mainMenuBox ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#mainMenuBox ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+#mainMenuBox ul li a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: yellow;
+
+}
+
+
+/* product */
+.product {
+    margin-bottom: 30px;
+}
+
+.product div{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.item_name {
+    color: blue;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+}
+
+
+
+/* 밑에 공지사항 커뮤니티 */
+.box{
+    display: inline-block;
+    width: 320px;
+    height: 150px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding-left: 20px; /*들여쓰기*/
+    padding-right: 20px;
+    margin: 10px; /* 두개박스가 서로 좀 띄어있게*/
+    text-align: left;
+}
+.box a{
+    /* 처음에 밑줄 없도록 설정 */
+    text-decoration: none;
+}
+
+.box a:hover {
+    color: red;
+}
+
+/* 이미지랑 공지사항 사이에 여백 */
+img {
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+/* img에 투명도 */
+img:hover{
+    opacity: 0.5;
+}
+
+
+/* cssEx-table용 */
+table {
+    margin:0 auto; 
+    width: 650px;
+    margin-bottom: 30px;
+}
+#item_name {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+#price {
+    text-align: center;
+    color: red;
+}

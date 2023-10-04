@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval 연습문제2</title>
+    <script>
+        let count = 0;
+        function startCount(){
+            timerID = setInterval('showImg()', 500);
+        }
+        function showImg(){
+            count ++;
+            countShow.innerHTML = 11-count;
+            showBomb.src = "image/bomb"  + count +".jpg";
+            if (count==11){
+                clearTimeout(timerID);
+                count = 0;
+            }
+        }
+    </script>
+    <style>
+        body{
+            margin: 0px, center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="countShow"></h2>
+    <img id="showBomb"></h2>
+    <br>
+    <button onclick="startCount()">카운트 다시 시작</button>
+    
+</body>
+</html>

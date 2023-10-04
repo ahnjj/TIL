@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').on('click',function(e){
+                // 현재 이벤트의 다른 listener 중지
+                e.stopImmediatePropagation();
+                alert('click1');
+            });
+            $('#btn').on('click',function(){
+                alert('click2');
+
+            });
+            $('#btn').on('click',function(){
+                alert('click3');
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">button</button>
+    
+</body>
+</html>

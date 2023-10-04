@@ -1,0 +1,65 @@
+/* external css */
+
+body {
+    /* align-items: center;  */
+    margin: 25px;
+}
+div#menu {
+    margin: 0 auto;
+    align-items: center;
+    background-color: white;
+}
+
+div#menu ul li {
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    background-color: grey;
+    margin: 0px;
+    margin-bottom: 15px;
+    border: solid 3px grey;
+}
+.menu div:hover {
+    color: red;
+    background-color: yellow;
+    /* 밑줄 */
+}
+
+
+/* items */
+div#items {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    
+}
+
+#item {
+    display: inline-block;
+    width: 300px;
+}
+
+
+/* bottom */
+div#bottom table {
+    margin: 0 auto;
+    align-items: center;
+    background-color: white;
+    border: solid 1px grey;
+    border-radius: 10px;
+}
+
+div#bottom ul li {
+    text-align: left;
+    color: blue;
+    list-style-type: none;
+
+}
+.notice div:hover {
+    color: red;
+}
+#notice {
+    display: inline-block;
+}

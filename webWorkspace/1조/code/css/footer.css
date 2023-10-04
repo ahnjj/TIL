@@ -1,0 +1,78 @@
+footer{
+	border-bottom: #cccccc 1px;
+    width:100%;
+}
+
+#footerBox{
+	background-color: black;
+	margin: 0 auto;
+	text-align: center;
+    display: inline-block;
+	width: 100%;
+
+}
+
+#footerBox a{
+    color: #221e1f;
+}
+
+#footerBox div{
+	/* background-color: rgb(235, 190, 153); */
+	/* border:solid 1px #58585a; */
+	margin-top:10px;
+	padding:20px;
+	margin:0;
+}
+
+/*********** BOTTOM MENU *************/
+
+
+#bottomMenuBox {
+	height:30px;
+	line-height:30px;
+}
+
+#bottomMenuBox li {
+	display:inline-block;	
+	padding:5px;
+}
+
+#bottomMenuBox li a {
+	color: #cccccc;
+	font-weight:bold;
+	text-align:left;
+	text-decoration:none;
+}
+
+
+#bottomMenuItem{
+	color: black;
+}
+
+/* logo */
+
+#companyInfo {
+    height:60px;
+	line-height:60px;
+	/* float: left; */
+	display: block;
+}
+#companyInfo img{
+    height:60px;
+}
+
+
+/* 맨 밑에 top버튼 누르면 위로 올라감 */
+#moveToTop:hover { 
+    opacity:0.7;
+    cursor:pointer;
+}
+/* 
+#moveToTopBox {
+	background-color: black;
+    display: flex;
+    /* display: inline-block; */
+	/* float: right; */
+
+ /* }  */ 
+

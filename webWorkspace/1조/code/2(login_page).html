@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/2_login.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/2_checkForm.js"></script> 
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/0_menu.css">
+    <link rel="stylesheet" href="css/0_font.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+       <header>
+           <div id="headerBox">
+               <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+               <div id="topMenuBox">
+                   <ul>
+                       <li><a href="2(login_page).html">로그인</a></li>
+                       <li><a href="3_join.html">회원가입</a></li>
+                   </ul>
+               </div>
+           </div>
+       <nav>            
+           <div id="mainMenuBox">
+               <ul id="menuItem">
+                   <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                   <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                   <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                   <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>
+                   <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+                   <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+               </ul>                    
+           </div>
+       </nav>
+       </header>
+    <!-- header끝 -->
+
+    <div id="form">
+        <div>
+            <h2>로그인</h2>
+        </div>
+        <div>
+            <a id="joinForm" name="joinForm"  method="post" action="joinMemberOk">
+
+                <input type="text" name="id" id="id" value="아이디 또는 이메일" required><br><br>
+                <input type="password" name="password" id="password" size="" value="비밀번호" required><br><br>
+                <label><input type="checkbox" id="loginKeepUp" checked value="로그인 상태 유지">로그인 상태 유지</label><br> 
+                <br><br><a href="index.html"><input type="submit" name="login" id="login" value="로그인"></a>
+ 
+                <div class="searchAll" id="searchEmail"><a href="#">이메일 찾기</a></div>
+                <div class="searchAll" id="searchPassword"><a href="#">비밀번호 찾기</a></div>
+                <div class="searchAll" id="join"><a href="#">회원가입</a></div>
+             
+                <hr>
+                <br><br>
+                <div id="easyLogin">
+                    <ul>
+                        <li><a href="#"><img src="image/naver.png" class="eslg" value="네이버 로그인" width="250px"></a></li>
+                        <li><a href="#"><img src="image/kakao.png" class="eslg" value="카카오 로그인" width="250px"></a></li>
+                        <li><a href="#"><img src="image/email.png" class="eslg" value="이메일 로그인" width="250px"></a></li>
+                        <li><a href="#"><img src="image/facebook.png" class="eslg" value="페이스북 로그인" width="250px"></a></li>
+                    </ul>
+                </div>
+                <br>
+                <div id="oldSearch">
+                    <a id="oldId" href="#">구 회원 아이디  / </a>
+                    <a id="oldPass" href="#">비밀번호 찾기</a>
+                </div>
+
+            </a>
+        </div>
+    </div>
+        <!-- footer -->
+        <footer>
+        <div id="footerBox">
+        <div id="companyInfo"><img src="image/logo_footer.png"></div>
+            <div id="bottomMenuBox">
+                <ul id="bottomMenuItem">
+                    <li><a href="#">회사소개  </a></li>
+                    <li><a href="#"> 구독신청  </a></li>
+                    <li><a href="#"> 개인정보 처리방침 </a></li>
+                    <li><a href="#"> 전자금융거래약관  </a></li>
+                    <li><a href="#"> 광고 안내  </a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </div>
+        <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+    </footer>
+    <!-- footer 끝 -->
+    </div>
+
+</body>
+</html>

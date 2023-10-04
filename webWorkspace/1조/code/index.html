@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/1_index.css">
+    <link rel="stylesheet" type="text/css" href="css/1_opinion.css">
+
+    <link rel="stylesheet" type="text/css" href="css/0_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/1_slideShow.css">
+    <link rel="stylesheet" type="text/css" href="css/1_top10.css">
+    <link rel="stylesheet" type="text/css" href="css/1_weekly.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script> 
+    <script src="js/slideShow.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/0_font.css">
+
+</head>
+<body>
+   
+    <div id="wrap">
+         <!-- header -->
+        <header>
+            <div id="headerBox">
+                <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+                <div id="topMenuBox">
+                    <ul>
+                        <li><a href="2(login_page).html">로그인</a></li>
+                        <li><a href="3_join.html">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+        <nav>            
+            <div id="mainMenuBox">
+                <ul id="menuItem">
+                    <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                    <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                    <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                    <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>                    
+                    <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+                    <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+                </ul>                    
+            </div>
+        </nav>
+        </header>
+     <!-- header끝 -->
+
+    <!-- section: 바디부분 -->
+        <section>
+            <!-- 슬라이드쇼, 요일별, top10클래스 3개 div -->
+            <div class="mainTop">
+                <!-- 슬라이드쇼, 요일별 (왼쪽에 두개 div) -->
+                <div class="mainTopLeft">
+                    <!-- 슬라이드 쇼 --> 
+                    <article  id="slideShow"> 
+                        <div id = "prevNextButtonBox">   <!--슬라이드 쇼 이미지 넘기기 버튼-->
+                            <img id ="prevButton" src="image/prevButton.png">
+                            <img id="nextButton" src="image/nextButton.png">
+                        </div>
+                        <div id="slideShowBox">
+                            <div id="slidePanel">
+                              <a href="5-1(detail_page).html"><img src= "https://www.itworld.co.kr/files/itworld/ITW_202308_02/windows-apps-chrome-os-chromeboo.jpg" class="slideImage"></a>
+                              <a href="5-2(detail_page).html"><img src= "https://www.itworld.co.kr/files/itworld/ITW_202307_01/m365copilot_business_1920x1080_p.jpg" class="slideImage"></a>
+                              <a href="5-3(detail_page).html"><img src= "https://www.itworld.co.kr/files/itworld/ITW_202308_01/m14-macbook-dell-graphic-2.jpg" class="slideImage"></a>
+                              <a href="5-4(detail_page).html"><img src= "https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1413990928.jpg" class="slideImage"></a>
+                              <a href="5-5(detail_page).html"><img src= "https://www.itworld.co.kr/files/itworld/ITW_202307_02/GettyImages-1438982991.jpg" class="slideImage"></a>
+                            </div>
+                        </div> 
+                        
+                    
+                        <!-- 슬라이드쇼 컨트롤 패널 -->
+                        <div id = "controlPanel">
+                            <img src="image/controlButton1.png" class="controlButton">
+                            <img src="image/controlButton1.png" class="controlButton">
+                            <img src="image/controlButton1.png" class="controlButton">
+                            <img src="image/controlButton1.png" class="controlButton">
+                            <img src="image/controlButton1.png" class="controlButton">
+                        </div>                    
+                    </article> 
+                    <!-- slideShowBox 끝 -->
+
+                    <!-- 요일별 뉴스 -->
+                    <div id="weeklyNews">
+                        <!-- 요일별 뉴스 헤더 -->
+                        <div id="weeklyHeader">
+                        <div id="weeklyArticle">
+                            <h1>Global Weekly News</h1><br>
+                        </div>
+                        <!-- 요일별 기사 목록 -->
+                            <div id="weeklyArticle">
+                                <ul id="weeklyItem">
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/31/britain-must-become-a-leader-in-ai-regulation-say-mps">Britain must become a leader in AI regulation, say MPs</a></li>
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/31/tiktok-removes-284-accounts-linked-to-chinese-disinformation-group">TikTok removes 284 accounts linked to Chinese disinformation group</a></li>
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/30/ai-powered-drone-beats-human-champion-pilots">AI-powered drone beats human champion pilots </a></li>
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/30/uk-cybersecurity-agency-warns-of-chatbot-prompt-injection-attacks">UK cybersecurity agency warns of chatbot<br> ‘prompt injection’ attacks</a></li>
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/31/fish-doorbells-historic-sandwiches-50-of-the-weirdest-most-wonderful-corners-of-the-web-picked-by-an-expert">Fish doorbells! Historic sandwiches! 50 of the weirdest, <br>most wonderful corners of the web – picked by an expert</a></li>
+                                    <li><a href="https://www.theguardian.com/commentisfree/2023/aug/31/vandal-ulez-camera-tory-mps-protest-criminal-damage-police">When is a vandal not a vandal? When they’re attacking Ulez cameras, say desperate Tory MPs</a></li>
+                                    <li><a href="https://www.theguardian.com/technology/2023/aug/31/tesla-investigated-over-funds-used-to-build-secret-austin-house-for-elon-musk">Tesla investigated over funds ‘used to build secret Austin house for Elon Musk’</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top 10 뉴스 -->
+                <article id="top10">
+                    <!-- top10 뉴스 헤더 -->
+                    <div id="topHeader">
+                        <h1 class="topHead" id="bold">Top10</h1><br>
+                        <h1 style="font-style: italic">News</h1><br>
+                        <h3 id="date">여기에 날짜 출력</h3>
+                    </div>
+                    <!-- top10 기사 목록 -->
+                    <div id="topArticle">
+                        <ul id="topItem">
+                            <li><h2>1</h2><a href="https://www.itworld.co.kr/topnews/297433" class="news_noLine">  소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스</a></li>
+                            <li><h2>2</h2><a href="https://www.itworld.co.kr/topnews/297307" class="news_noLine">  윈도우 11 작업 표시줄 맞춤 설정 6가지</a></li>
+                            <li><h2>3</h2><a href="https://www.itworld.co.kr/topnews/297259" class="news_noLine">  “사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망</a></li>
+                            <li><h2>4</h2><a href="https://www.itworld.co.kr/topnews/298345" class="news_noLine">  놓치지 말아야 할 ‘윈도우 11’ 꿀기능 10가지</a></li>
+                            <li><h2>5</h2><a href="https://www.itworld.co.kr/topnews/298543" class="news_noLine">  “게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법</a></li>
+                            <li><h2>6</h2><a href="https://www.itworld.co.kr/topnews/301501" class="news_noLine">  LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ 노렸다</a></li>
+                            <li><h2>7</h2><a href="https://www.itworld.co.kr/topnews/301639" class="news_noLine">  AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법</a></li>
+                            <li><h2>8</h2><a href="https://www.itworld.co.kr/topnews/301735" class="news_noLine">  더 강력한 생성형 AI 규제가 필요한 이유</a></li>
+                            <li><h2>9</h2><a href="https://www.itworld.co.kr/topnews/301831" class="news_noLine">  런웨이 젠2 활용한 SF 단편영화 제작기</a></li>
+                            <li><h2>10</h2><a href="https://www.itworld.co.kr/topnews/302293" class="news_noLine">  “더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</a></li>
+                            </ul>
+                    </div>
+                </article>
+            </div>
+            <!--mainTop끝 : 3개 div   -->
+
+            <br><br><br>
+            <!-- opinion바 -->
+            <div id="opinion">
+           <table>
+                <tr>
+                    <td rowspan="2" colspan="2">
+                      <a href="https://www.itworld.co.kr/opinion/304999">
+                        <div id="opi_box1">
+                          <img src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/run_digital-vanguard_business-executive-with-briefcase_career-growth-100786736-large.jpg" alt=""/>
+                          <h4 class="opi_title_big">
+                            블로그 | 클라우드 컴퓨팅 전문가의 3가지 경력 개발 경로
+                          </h4><br>
+                          <p class="opi_title">클라우드 컴퓨팅 컨설팅은 역동적이고 다양한 경력 개발 경로를 제공하며, 항상 새로운 클라우드 인재를 찾고 있는 분야이다. 컨설턴트는 다른 영역에서 입증된 프로세스와 베스트 프랙티스를 사용해 기업의 클라우드 도입 및 마이그레이션 프로세스를 안내하는 중추적인 역할을 한다. 여기서는 3가지 경력 개발 경로의 특징과 각 경로의 기복을 짚어 보겠다. 참고로, 필자는 3가지 경력 모두를 경험했다.</p><br>
+                        </div></a>
+                    </td>
+                    <td colspan="2">
+                      <a href="https://www.itworld.co.kr/opinion/303391">
+                        <div id="opi_box2">
+                          <img src="https://www.lgcns.com/wp-content/uploads/2022/12/%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF2.png" alt=""/>
+                          <h4 class="opi_title">
+                            “생성형 AI 시스템 배치는 어디에?” 클라우드 vs. 온프레미스 논쟁 가열
+                          </h4>
+                        </div></a>
+                    </td>
+                </tr>
+                <!-- 2번째줄 -->
+                <tr>
+                    <td colspan="2">
+                      <a href="https://www.itworld.co.kr/opinion/303157">
+                        <div id="opi_box3">
+                          <img src="https://blog.touchclass.com/wp-content/uploads/2021/03/shutterstock_1695249988.png" alt=""/>
+                          <h4 class="opi_title">‘환멸의 계곡’에 진입한 하이브리드 근무
+                          </h4>
+                        </div></a>
+                    </td>
+                </tr>
+                <!-- 3번째줄 -->
+                <tr>
+                    <td>
+                      <a href="https://www.itworld.co.kr/opinion/302977">
+                        <div id="opi_box4">
+                          <img src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1442906428.jpg" alt=""/>
+                          <h4 class="opi_title">AI와 소프트웨어 개발의 미래<br>세상을 바꾸는 인공지능</h4>
+                        </div></a>
+                    </td>
+                    <td>
+                      <a href="https://www.itworld.co.kr/opinion/302959">
+                        <div id="opi_box5">
+                          <img src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1458700474.jpg" alt=""/>
+                          <h4 class="opi_title">
+                            원격근무 생산성 논란,<br>관리자는 “믿고 싶은 것만 믿는다”
+                          </h4>
+                        </div></a>
+                    </td>
+                    <td>
+                      <a href="https://www.itworld.co.kr/opinion/302335">
+                        <div id="opi_box6">
+                          <img src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1353134157.jpg" alt=""/>
+                          <h4 class="opi_title">온프레미스보다 더 비싼 클라우드<br>가끔은 전통적 방식을</h4>
+                        </div></a>
+                    </td>
+                    <td>
+                      <a href="https://www.itworld.co.kr/opinion/301057">
+                        <div id="opi_box7">
+                          <img src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/m27-GettyImages-518884928.jpg" alt=""/>
+                          <h4 class="opi_title">생성형 AI, 더 새롭고<br>골치 아픈 섀도우 IT 시대를 열다
+                          </h4>
+                        </div></a>
+                    </td>
+                </tr>
+                <!-- 4번째줄 -->
+                <tr>
+                    <td colspan="4">
+                      <a href="https://www.itworld.co.kr/opinion/299557">
+                        <div id="opi_box8">
+                          <img src="https://img.kr.news.samsung.com/kr/wp-content/uploads/2017/06/%EC%84%B8%EC%83%81%EC%9D%84%EC%9E%87%EB%8A%94%EC%9D%B4%EC%95%BC%EA%B8%B0-%EB%8F%84%EB%B9%84%EB%9D%BC_03-SKver.jpg" alt=""/>
+                          <h4 class="opi_title">
+                            <!-- 하시코프의 라이선스 변경과 오픈소스의 본질 -->
+                          </h4>
+                        </div></a>
+                    </td>
+                  </tr>
+                </table>
+            </table> 
+            </div>
+          </div>
+        </section>
+    <!--section끝 : 바디 끝  -->
+
+    <!-- footer -->
+        <footer>
+            <div id="footerBox">
+            <div id="companyInfo"><img src="image/logo_footer.png"></div>
+                <div id="bottomMenuBox">
+                    <ul id="bottomMenuItem">
+                        <li><a href="#">회사소개  </a></li>
+                        <li><a href="#"> 구독신청  </a></li>
+                        <li><a href="#"> 개인정보 처리방침 </a></li>
+                        <li><a href="#"> 전자금융거래약관  </a></li>
+                        <li><a href="#"> 광고 안내  </a></li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                </div>
+            <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+    </footer>
+</div>
+</body>
+</html>

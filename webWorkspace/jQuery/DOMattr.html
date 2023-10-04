@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 속성변경</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#img')
+                .on('mouseover', function(){
+                    $(this).attr('src','image/apple.png');
+                })
+                .on('mouseout', function(){
+                    $(this).attr('src','image/heart.png');
+                });
+
+        });
+    </script>
+</head>
+<body>
+    <img src="image/heart.png" id="img" alt="">
+</body>
+</html>

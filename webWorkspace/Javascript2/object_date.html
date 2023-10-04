@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let today = new Date();
+
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        let day;    // 요일 저장할 변수
+
+        //요일 설정
+        switch(today.getDay()){
+            case 0: day="일"; break;
+            case 1: day="월"; break;
+            case 2: day="화"; break;
+            case 3: day="수"; break;
+            case 4: day="목"; break;
+            case 5: day="금"; break;
+            default: day="토";
+        }
+        document.write(`오늘은${year}년${month}월${date}일${day}요일입니다.`);
+
+        let hour = today.getHours();
+        let min = today.getMinutes();
+        let sec = today.getSeconds();
+        document.write(`지금은 ${hour}시 ${min}분 ${sec}초입니다.`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

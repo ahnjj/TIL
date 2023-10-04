@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 : setTimeOut()</title>
+    <script>
+        function openMessageWin(){
+            window.open("msgWindow.html", "msgWin", "width=300, height=200");
+        }
+
+        // msgWindow.html창 닫힌후에 부모창 window_setTimeout.html창이 다시 focus를 받을때 수행되는 함수
+        function showMsg(){
+            document.write("로드하자마자 열린 공지사항 창이 <br> 3초 후에 자동으로 닫혔습니다.");
+        }
+    </script>
+</head>
+<body onload="openMessageWin()" onfocus="showMsg()">
+    
+</body>
+</html>

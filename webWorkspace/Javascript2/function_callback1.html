@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let callback = function(){
+            alert("익명함수입니다.");
+        };
+
+        function show(a){
+            a();
+        }
+        show(callback); 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

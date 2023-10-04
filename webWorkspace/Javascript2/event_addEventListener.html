@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let greenBtn = document.getElementById("greenBtn");    // 선택자로 가져오기
+            let redBtn = document.getElementById("redBtn");
+            let blueBtn = document.getElementById("blueBtn");
+            let h2 = document.getElementById("h2");
+
+            greenBtn.addEventListener("click", function(){
+                h2.style.color = 'green';
+            });
+
+            // 화살표 함수로
+            redBtn.addEventListener("click", ()=>{
+                h2.style.color = 'red';
+            });
+
+            blueBtn.addEventListener("click", changeToBlue);
+        
+        }
+        // 일반 함수로
+        function changeToBlue(){
+            let h2 = document.getElementById("h2");
+            h2.style.color = 'blue';
+        }
+
+    </script>
+</head>
+<body>
+    <h2 id="h2">글자 색 변경</h2>
+    <button id="greenBtn">green</button>
+    <button id="redBtn">red</button>
+    <button id="blueBtn">blue</button>
+</body>
+</html>

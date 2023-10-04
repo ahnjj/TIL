@@ -1,0 +1,26 @@
+#headerBox {
+	height:60px;
+	line-height:60px; /* 줄간격 - 수직으로 가운데 정렬 효과 */
+	padding:0;
+}
+
+#logoBox {
+	float:left;
+	height:60px;
+	line-height:60px;
+}
+
+/* 메인메뉴 스크롤 올려도 고정 */
+
+/* js파일에서 동적으로 addClass()로 적용할 css */
+.mainMenuFixed{
+    position: fixed;
+    top:0px;
+}
+
+/* js파일에서 동적으로 addClass()로 적용할 css */
+/* 메인 메뉴 아래에 그림자 */
+.mainMenuShadow{
+    box-shadow: 0 3px 5px 0px gray;
+    
+}

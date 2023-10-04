@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window setInterval연습문제</title>
+    <script>
+        let count = 0
+        function start(){
+            alert('이미지 10개 출력');
+            timerID=setInterval('showImg()', 1000);   // 1초마다 showImg함수 실행
+        }
+      
+        function showImg(){
+            if (count == 10){
+                clearInterval(timerID);   // 타이머 해제
+            }
+            if (count%2 == 0)
+                document.write("<img src='image/apple.png'>")
+            else
+                document.write("<img src='image/bomb.png'>")
+            count ++;
+    
+        }
+    </script>
+</head>
+<body>
+    <button onclick="start()"></button>
+</body>
+</html>

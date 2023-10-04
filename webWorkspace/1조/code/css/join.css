@@ -1,0 +1,106 @@
+/* 3_join.html 회원가입페이지.css */
+#text_area {
+  width: 372px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#id,
+#pwd {
+  width: 100px;
+}
+#h2 {
+  text-align: center;
+}
+.text_div {
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.input_div input {
+  width: 355px;
+  height: 48px;
+  padding-left: 15px;
+}
+#id_input > input {
+  width: 355px;
+  padding-left: 15px;
+}
+.input_div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+/* .input_div input::placeholder {
+  padding-left: 10px;
+  color: rgb(71, 71, 71);
+} */
+.req_color {
+  color: coral;
+}
+
+/* 전화번호 */
+/* #hp1, #hp2, #hp3 {
+    height: 15px;
+    width: 10%;
+} */
+#hp_area {
+  width: 372px;
+  padding: 0;
+  margin: 0;
+}
+#hp_area input {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+/* #hp_box div{
+    display: inline-block;
+    width: 30px;
+} */
+
+#hp_1_div , #hp_2_div, #hp_3_div {
+  display: inline-block;
+  text-align: center;
+  width: 106px;
+  /* width: 30px */
+  height: 48px;
+  margin-bottom: 20px;
+}
+.hp- {
+  width: 5px;
+  display:inline-block;
+  margin: 0 5px;
+}
+#adult_area {
+  margin : 20px 0 15px 0;
+}
+
+
+/* 약관동의 */
+#agree_area{
+    text-align: left;
+    margin: auto 0;
+    margin-left: 20px;
+}
+#agree_all_chkBox {
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+}
+.agree_det {
+  margin: 8px 0;
+  font-size: smaller;
+}
+#join_div {
+  width: 372px;
+  height: 48px;
+  margin-top: 50px;
+}
+#join_div > input {
+  width: 372px;
+  border-radius: 0%;
+  border: 1px black solid;
+  background-color: white;
+  height: 48px;
+}

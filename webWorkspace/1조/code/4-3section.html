@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데일리코드 개발자 섹션</title>
+  <link rel="stylesheet" href="css/4_section.css">
+  <link rel="stylesheet" href="css/4_highlight.css">
+  <link rel="stylesheet" href="css/4_rightBar.css">
+  <link rel="stylesheet" href="css/4_recent.css">
+  <link rel="stylesheet" href="css/0_menu.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/4_scripts.js"></script>
+</head>
+<body>
+  <!-- <div id="wrap"> -->
+    <!-- header -->
+   <header>
+       <div id="headerBox">
+           <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+           <div id="topMenuBox">
+               <ul>
+                   <li><a href="2(login_page).html">로그인</a></li>
+                   <li><a href="3_join.html">회원가입</a></li>
+               </ul>
+           </div>
+       </div>
+   <nav>            
+       <div id="mainMenuBox">
+           <ul id="menuItem">
+              <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+              <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+              <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+              <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>               <li><a href="7(weekly_page).html">요일별</a></li>
+              <li><a href="6(ranking_news).html">인기뉴스</a></li>
+           </ul>                    
+       </div>
+   </nav>
+   </header>
+   <!-- 헤더 끝 -->
+  <main class="container"> <!-- 전체 메인 페이지 -->
+    <section class="dailyCodeITSection"> <!-- 기사가 들어갈 공간 -->
+      <div id="IThighlight"> <!-- 하이라이트 뉴스 -->
+        <ul id="mainHighlightNews">
+          <li class="highlight1"> <!-- 얘가 제일 큰 부분 -->
+            <div>
+              <a href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/305539" id="bigNews_banner">
+                <div>
+                  <img id="bigNews_image" src="https://blog.kakaocdn.net/dn/bD9P2Q/btrGuS1ePrj/eAH3hukA6JJmIHVw1kBelK/img.png" alt="개발자">
+                </div>
+                <div id="bigNews_text">
+                  <p style="color: white; font-weight: bold;">개발자</p>
+                  <h3>경험을 통해 배운<br>그래프QL 도입 성공 전략</h3>
+                  <p class="greyInfo">2시간 전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="highlight2"> <!-- 작은 기사1 -->
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/302479">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1411365795.jpg" alt="에이닷">
+                  <h3 class="highText">“AI 직군 현직자‧취준생,<br>역량, 적합도 파악에 어려움 느껴”</h3>
+                  <p class="greyInfo">1시간 전</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/304483">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/python-excel-microsoft-100945091-orig.jpg" alt="에이닷">
+                  <h3 class="highText">마이크로소프트,<br>엑셀 내 파이썬 통합 지원</h3>
+                  <p class="greyInfo">3시간 전</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/302293">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1413990928.jpg" alt="에이닷">
+                  <h3 class="highText">“더 쉽고 빠른 파이썬”<br>파이파이(PyPy)의 이해</h3>
+                  <p class="greyInfo">7시간 전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ITart">
+        <article id="recentArticle">
+          <h3>개발자 최신 뉴스</h3> <!-- 하단 뉴스 -->
+          <hr>
+          <ul class="overHidden" id="recentNews_Area">
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/300889">
+                  <div class="recentText">
+                    <h3 class="overHidden">챗GPT, 달리(DALL-E)와 같은 생성형 AI 툴이 등장한 이후, 온 세계가 AI에 대한 이야기로 뒤덮였다. AI로 영화 예고편을 만들고 글을 쓰고 심지어 의사, 법률 및 비즈니스 스쿨 시험에 합격할 수도 있다는 것이 입증됐으니, 당연한 현상이다.</h3>
+                    <p class="greyInfo">3시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/m26-GettyImages-1505054228.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/300883">
+                  <div class="recentText">
+                    <h3 class="overHidden">클라우드 애플리케이션 개발에서 마이크로서비스 아키텍처(microservices architecture)란, 작고 느슨하게 결합된 여러 서비스의 조합을 통해 소프트웨어 애플리케이션을 만드는 구조적인 방법론을 가리킨다. 여기서 서비스란 재고 물품을 데이터베이스에 추가하거나</h3>
+                    <p class="greyInfo">3시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/GettyImages-500309879.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/300505">
+                  <div class="recentText">
+                    <h3 class="overHidden">오랫동안 애플 운영체제의 시험판 버전을 설치하지 말라고 경고하는 기사를 써왔다. 물론 베타는 애플이 맥, 아이폰 또는 아이패드를 변화시킬 새로운 기능을 공개하기 때문에 흥미진진하다. 베타 버전을 다운로드하면 바로 미래를 경험할 수 있다!</h3>
+                    <p class="greyInfo">3시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/iosbeta17.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/299635">
+                  <div class="recentText">
+                    <h3 class="overHidden">파이썬은 오래전부터 서버 측 프레임워크용 언어로 쓰였고, 거의 모든 규모, 거의 모든 환경의 프로젝트를 지원한다. 그러나 파이썬은 전통적으로 백엔드 영역에 갇혀 있었다. 프론트 엔드, 클라이언트 측 코드를 만들기 위한 용도로 파이썬을 쓰는 문화는, 적어도 아직까지는 크게 확산하지 않았다.</h3>
+                    <p class="greyInfo">4시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/GettyImages-1446486926.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/298387">
+                  <div class="recentText">
+                    <h3 class="overHidden">모두가 아는 것처럼 생성형 AI가 최근 엄청난 인기를 끌고 있다. 오픈AI의 챗GPT, 구글 바드와 같은 텍스트 생성기가 대표적이다. 이외에도 텍스트 투 이미지(text-to-image) 생성기가 있는데, 이 분야에서 여기서 가장 앞서 나가는 것이 오픈소스 이미지 생성 AI 시스템인 스테이블 디퓨전(Stable Diffusion)이다.</h3>
+                    <p class="greyInfo">4시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/TechPlay/GettyImages-1285599376.300x240.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/298339">
+                  <div class="recentText">
+                    <h3 class="overHidden">웹과 모바일, 프론트엔드과 백엔드 등 용도와 환경, 상황에 따라 더 유리한 언어, 더 불리한 언어가 있고 다른 언어와의 궁합도 고려해야 한다. 심지어 언어에 대한 사회적 수요도 변한다. 한때 많은 기업의 구애를 받았던 개발자도 프로그래밍 언어의 흥망성쇠에 따라 어느 순간 아무도 찾지 않는 자신을 발견한다.</h3>
+                    <p class="greyInfo">8시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_01/Numbers20230707.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/297433">
+                  <div class="recentText">
+                    <h3 class="overHidden">애자일 선언문이 작성된 2001년에는 이런 원칙이 필요했다. 대부분 직원이 칸막이 속에서 일했고 많은 프로젝트가 팀 간의 작업과 핸드오프로 관리됐기 때문이다. 폭포수 프로젝트 관리 방법론은 실패율이 높았고 그로 인해 스크럼, 칸반을 비롯한 애자일 방법론으로 전환하는 조직이 늘었다.</h3>
+                    <p class="greyInfo">10시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_01/m03-GettyImages-1303539473.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/296899">
+                  <div class="recentText">
+                    <h3 class="overHidden">소프트웨어 공급망 보안 업체 레질리온(Rezilion)이 오픈SSF(Open Source Security Foundation, OpenSSF)의 스코어카드(Scorecard)를 사용해 LLM(Large Language Model) 오픈소스 생태계를 평가한 결과, 많은 LLM 기반 프로젝트에서 보안 베스트 프랙티스와 잠재적 위험에 상당한 격차가 있음을 확인했다.</h3>
+                    <p class="greyInfo">10시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/m29-GettyImages-466101118.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/296707">
+                  <div class="recentText">
+                    <h3 class="overHidden">모바일 금융 서비스 토스를 운영하는 비바리퍼블리카(이하 토스)가 경력 3년 이하 개발자를 공개 채용하는 ‘2023 토스 넥스트(NEXT) 개발자 챌린지’의 지원 접수를 시작한다고 6월 28일 밝혔다.</h3>
+                    <p class="greyInfo">12시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/0628_toss.png" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/296671">
+                  <div class="recentText">
+                    <h3 class="overHidden">API를 구축하는 소프트웨어 개발자 사이에서도 AI가 큰 인기를 끌고 있다. 포스트맨(Postman)이 최근 4만 명의 개발자와 API 전문가를 대상으로 실시한 설문조사 결과를 정리한 2023년 API 현황 보고서(2023 State of the API Report)에 따르면</h3>
+                    <p class="greyInfo">14시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/m28-pexels-tara-winstead-8849289.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <a href="#" id="load_more">더 보기</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <rightSideBar class="rightSideBar"> <!-- 오른쪽 '많이 본 기사' 목록바 -->
+      <header> <!-- 큰 글자 -->
+        <h2>많이 본 기사</h2>
+        <a href=""></a>
+      </header>
+      <div class="news_list">
+        <ol>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304555" class="news_noLine">공급 긴장 완화되자 AI에 주목하는 네트워크 업계</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304285" class="news_noLine">“프로그래밍 언어 개발의 감초” LLVM의 이해와 활용 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/304657" class="news_noLine">“윈도우 버리지 않을 이유가 사라졌다” 물음표를 느낌표로 바꾼 크롬OS</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/303817" class="news_noLine">VR 헤드셋 시대, 프라이버시가 위험하다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/302293" class="news_noLine">“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301831" class="news_noLine">런웨이 젠2 활용한 SF 단편영화 제작기</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301735" class="news_noLine">더 강력한 생성형 AI 규제가 필요한 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301639" class="news_noLine">AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301501" class="news_noLine">LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ 노렸다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298543" class="news_noLine">“게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298345" class="news_noLine">놓치지 말아야 할 ‘윈도우 11’ 꿀기능 10가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297979" class="news_noLine">파이널 판타지 16 리뷰 | 액션에 스타일 더한 가장 어두운 판타지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298057" class="news_noLine">글로벌 칼럼 | 센트OS 대안으로 또 다른 RHEL 클론을 선택해선 안 되는 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297835" class="news_noLine">AI 규제에 적극 동조하는 마이크로소프트의 뻔한 속내</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297433" class="news_noLine">소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297307" class="news_noLine">윈도우 11 작업 표시줄 맞춤 설정 6가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297259" class="news_noLine">“사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/303895" class="news_noLine">“마침내 파이썬에서도 흐름 제어를” 구조적 패턴 매칭을 사용하는 방법</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </rightSideBar>
+  </main>
+    <!-- footer -->
+    <footer>
+      <div id="footerBox">
+      <div id="companyInfo"><img src="image/logo_footer.png"></div>
+          <div id="bottomMenuBox">
+              <ul id="bottomMenuItem">
+                  <li><a href="#">회사소개  </a></li>
+                  <li><a href="#"> 구독신청  </a></li>
+                  <li><a href="#"> 개인정보 처리방침 </a></li>
+                  <li><a href="#"> 전자금융거래약관  </a></li>
+                  <li><a href="#"> 광고 안내  </a></li>
+                  <li><a href="#">인재채용</a></li>
+              </ul>
+          </div>
+      <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+  </footer>
+</body>
+</html>

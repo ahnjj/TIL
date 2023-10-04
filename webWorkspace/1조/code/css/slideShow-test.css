@@ -1,0 +1,64 @@
+/* main페이지 top부분 */
+/* slideshow, 요일별 기사, top 10 */
+.mainTop{
+	display: inline-block;
+	margin-top: 30px;
+	margin: 30px auto;
+}
+
+/* slideshow , 요일별 기사 */
+.mainTopLeft{
+	margin: auto;
+	display:inline-block;
+}
+
+/* slideshow */
+/* slide image옆으로 배치 */
+/* 이미지 1개만 보이게 하기:slide 영역 벗어나면 안보이게 */
+/* next, previous버튼 달아서 이미지 넘기도록 */
+
+#slideShow {
+	position:relative;
+	background-color:#ffffff;
+	height:480px;
+	line-height:520px;
+	/* width: 72%; */
+	width: 100%;
+	float: left;
+}
+
+#slideShowBox {
+	width:770px;
+	height:480px;
+	margin: 0 auto;
+	text-align:center;
+	overflow:hidden;  /*영역 벗어나면 이미지 안보이게*/
+}
+
+#slidePanel {
+	position:relative;
+	width:4000px;
+	height:480px;
+}
+
+.slideImage {
+	float:left;
+	display: grid;
+	width:800px;
+	height:480px;
+}
+
+/*  prev/next 버튼 */
+#prevNextButtonBox { position:relative; z-index:10;}    /* 부모박스 Relative잡아두고 */
+#prevButton {position:absolute; top:210px; left:4%; opacity:0.8; cursor:pointer;}
+#nextButton {position:absolute; top:210px; right:4%; opacity:0.8; cursor:pointer;}
+
+#prevButton:hover {opacity:1;}
+#nextButton:hover {opacity:1;}
+
+/* control 버튼 */
+#controlPanel { 
+	margin:0 auto; 
+	width:160px;
+}
+#controlPanel img { float:left; margin:10px;}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자손 선택자</title>
+    <style>
+       /* div#header h1 {color: red;} */
+       #section h2 {color: blue;}
+
+       /* #header의 모든 자손 h1과 모든 h2태그 */
+        #header h1,h2 {color: green;}
+
+       /* 따로 따로 표현하려면 - 부모를 앞에 붙여야한다. #header */
+       /* #header h1, #header h2 {color: green;} */
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">header - h1 제목</h1>
+        <div id="nav">
+            <h1>header - nav - h1 제목</h1>
+            <h2>header - nav - h2 제목</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h2 class="title">section - h2 제목</h2>
+
+    </div>
+    <!-- 테이블 태그 사용 시 주의 -->
+    <table border="1">
+        <tr><th>이름</th><th>주소</th></tr>
+        <tr><td>홍길동</td><td>서울시 강남구 1번지</td></tr>
+    </table>
+</body>

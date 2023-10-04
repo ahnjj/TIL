@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데일리코드 게임 섹션</title>
+  <link rel="stylesheet" href="css/4_section.css">
+  <link rel="stylesheet" href="css/4_highlight.css">
+  <link rel="stylesheet" href="css/4_rightBar.css">
+  <link rel="stylesheet" href="css/4_recent.css">
+  <link rel="stylesheet" href="css/0_menu.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/4_scripts.js"></script>
+</head>
+<body>
+  <!-- <div id="wrap"> -->
+    <!-- header -->
+   <header>
+       <div id="headerBox">
+           <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+           <div id="topMenuBox">
+               <ul>
+                   <li><a href="2(login_page).html">로그인</a></li>
+                   <li><a href="3_join.html">회원가입</a></li>
+               </ul>
+           </div>
+       </div>
+   <nav>            
+       <div id="mainMenuBox">
+           <ul id="menuItem">
+              <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+              <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+              <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+              <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>               <li><a href="7(weekly_page).html">요일별</a></li>
+              <li><a href="6(ranking_news).html">인기뉴스</a></li>
+           </ul>                    
+       </div>
+   </nav>
+   </header>
+   <!-- 헤더끝 -->
+  <main class="container"> <!-- 전체 메인 페이지 -->
+    <section class="dailyCodeITSection"> <!-- 기사가 들어갈 공간 -->
+      <div id="IThighlight"> <!-- 하이라이트 뉴스 -->
+        <ul id="mainHighlightNews">
+          <li class="highlight1"> <!-- 얘가 제일 큰 부분 -->
+            <div>
+              <a href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/303805" id="bigNews_banner">
+                <div>
+                  <img id="bigNews_image" src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/aio-ssd-cooler.jpg" alt="수냉">
+                </div>
+                <div id="bigNews_text">
+                  <p style="color: white; font-weight: bold;">게임</p>
+                  <h3>“장단점부터 선택 기준까지”<br>올인원 CPU 수랭 쿨러의 모든 것</h3>
+                  <p class="greyInfo">30분 전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="highlight2"> <!-- 작은 기사1 -->
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/topnews/301225">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/msteamsplaytogether.png" alt="에이닷">
+                  <h3 class="highText">팀즈, 게임 화면 스트리밍 위젯 출시<br>경쟁자는 트위치와 디스코드</h3>
+                  <p class="greyInfo">1시간 전</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/303619">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/netflix-cloud-gaming-hero-100944804-large.jpg" alt="에이닷">
+                  <h3 class="highText">넷플릭스, 게임 스트리밍 앱 테스트<br>그러나 애플TV는 논외</h3>
+                  <p class="greyInfo">1시간 전</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/301867">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/m03-Apple-WWDC23-macOS-Sonoma-gaming.jpg" alt="에이닷">
+                  <h3 class="highText">에이수스 ROG 스트릭스 G16 리뷰<br>총 평가는? ‘균형 잡힌’ 노트북</h3>
+                  <p class="greyInfo">2시간 전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ITart">
+        <article id="recentArticle">
+          <h3>게임 최신 뉴스</h3> <!-- 하단 뉴스 -->
+          <hr>
+          <ul class="overHidden" id="recentNews_Area">
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/302275">
+                  <div class="recentText">
+                    <h3 class="overHidden">리눅스로 스팀을 플레이하는 사용자가 애플 맥 사용자를 넘어섰다. 스팀의 월간 하드웨어 보고서 결과다. 여전히 대다수는 윈도우 PC를 사용하지만 리눅스 사용자(1.96%)가 맥 사용자(1.84%)를 넘어선 것은 일종의 사건이다.</h3>
+                    <p class="greyInfo">15분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/steam-deck-portal-background.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/300727">
+                  <div class="recentText">
+                    <h3 class="overHidden">지난 며칠간 유비소프트의 디지털 계정 정책에 급진적인 변화가 있다는 보도가 이어졌다. 유비소프트 계정에 정기적으로 로그인을 하지 않으면 계정이 삭제된다는 내용이었다. 트위터에 유비소프트의 정책을 강조한 한 게시물이 올라오면서 사용자 사이에서는 일종의 공황이 시작됐다.</h3>
+                    <p class="greyInfo">20분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/ubisoft-games-100943823-large.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/300217">
+                  <div class="recentText">
+                    <h3 class="overHidden">그동안 블리자드 게임을 플레이하는 방법은 배틀넷을 설치하는 것뿐이었다. 액티비전과 합병한 후 배틀넷에는 몇 가지 액티비전 게임이 추가됐고 이제 콜 오브 듀티 시리즈와 크래시 밴디쿳 4까지 배틀넷에서 서비스한다. 그러나 다른 게임 스토어와 플랫폼을 경원시하던 블리자드에 변화가 오는 것일까?</h3>
+                    <p class="greyInfo">30분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/overwatch-2-on-steam-100943645-large.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/300169">
+                  <div class="recentText">
+                    <h3 class="overHidden">인텔이 프로젝트 엔드게임(Project Endgame)으로 알려진 통합 게이밍 서비스 계층 개발을 중단한 것으로 알려졌다. 아크 GPU 드라이버 개발에 우선순위를 두는 동안 클라우드 야망을 보류한 것으로 보인다.</h3>
+                    <p class="greyInfo">40분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/m21-thanos-gauntlet-intel-inside.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/299599">
+                  <div class="recentText">
+                    <h3 class="overHidden">폴아웃과 엘더스크롤 개발사인 베데스다 스튜디오의 스타필드(Starfield)는 많은 게이머가 손꼽아 기다리는 차기 대작이다. 그러나 최근 한국어 미지원이 공식화되면서 한국 사용자의 실망도 크다.</h3>
+                    <p class="greyInfo">40분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/Starfield-Systemanforderungen.png" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/298543">
+                  <div class="recentText">
+                    <h3 class="overHidden">밸브(Valve)는 2015년에 이미 리눅스를 탑재한 게임 시스템을 출시했다. 당시 스팀(Steam) OS는 데비안(Debian) 기반이었고, 하드웨어는 델이나 에일리언웨어(Alienware) 같은 회사에서 제작했다.</h3>
+                    <p class="greyInfo">50분 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202307_01/steam_deck_desktop.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/297097">
+                  <div class="recentText">
+                    <h3 class="overHidden">PC를 조립할 때 부품 구매에 앞서 항상 사용자를 괴롭히는 질문은 "다음 신제품이 언제 출시되지?"다. 차기 신제품에 큰 변화가 없을 수도 있고 말 그대로 판도를 바꾸는 획기적인 기술이 적용될 수도 있는 그래픽 카드가 특히 문제다.</h3>
+                    <p class="greyInfo">1시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/4090-1-100935881-large-3x2.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/296437">
+                  <div class="recentText">
+                    <h3 class="overHidden">기술 업계(특히 구글의 역사)를 잘 아는 사람이라면 지난 2019년 구글의 ‘스태디아(Stadia)’ 게임 스트리밍이 발표됐을 당시 머지않아 사라질 운명이라는 것을 짐작했겠지만, 그래도 기술이 멋졌다는 사실은 부인할 수 없다.</h3>
+                    <p class="greyInfo">2시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/youtube-stadia-logo.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/296257">
+                  <div class="recentText">
+                    <h3 class="overHidden">6월 20일 개막해 일주일 동안 진행되는 스팀 넥스트 페스트(Steam Next Fest)가 곧 막을 내린다. 넥스트 페스트에서는 앞으로 출시될 수백 가지 이상의 신작 게임을 체험판, 얼리엑세스 등의 형태로 플레이할 수 있으며, 개발자의 실시간 플레이를 볼 수 있다.</h3>
+                    <p class="greyInfo">2시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202306_02/m26-en-garde.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/73240/%EA%B2%8C%EC%9E%84/304375">
+                  <div class="recentText">
+                    <h3 class="overHidden">엔비디아가 AI 뉴럴 네트워크의 최신 버전인 ‘엔비디아 DLSS 3.5’를 발표했다. 엔비디아는 새로운 DLSS 3.5로 AI가 강화된 실시간 레이 트레이싱을 선보일 예정이다.</h3>
+                    <p class="greyInfo">4시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202308_02/0823_nvidia.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <a href="#" id="load_more">더 보기</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <rightSideBar class="rightSideBar"> <!-- 오른쪽 '많이 본 기사' 목록바 -->
+       <!-- 큰 글자 -->
+        <h2>많이 본 기사</h2>
+        <a href=""></a>
+      
+      <div class="news_list">
+        <ol>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304555" class="news_noLine">공급 긴장 완화되자 AI에 주목하는 네트워크 업계</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304285" class="news_noLine">“프로그래밍 언어 개발의 감초” LLVM의 이해와 활용 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/304657" class="news_noLine">“윈도우 버리지 않을 이유가 사라졌다” 물음표를 느낌표로 바꾼 크롬OS</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/303817" class="news_noLine">VR 헤드셋 시대, 프라이버시가 위험하다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/302293" class="news_noLine">“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301831" class="news_noLine">런웨이 젠2 활용한 SF 단편영화 제작기</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301735" class="news_noLine">더 강력한 생성형 AI 규제가 필요한 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301639" class="news_noLine">AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301501" class="news_noLine">LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ 노렸다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298543" class="news_noLine">“게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298345" class="news_noLine">놓치지 말아야 할 ‘윈도우 11’ 꿀기능 10가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297979" class="news_noLine">파이널 판타지 16 리뷰 | 액션에 스타일 더한 가장 어두운 판타지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298057" class="news_noLine">글로벌 칼럼 | 센트OS 대안으로 또 다른 RHEL 클론을 선택해선 안 되는 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297835" class="news_noLine">AI 규제에 적극 동조하는 마이크로소프트의 뻔한 속내</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297433" class="news_noLine">소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297307" class="news_noLine">윈도우 11 작업 표시줄 맞춤 설정 6가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297259" class="news_noLine">“사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/303895" class="news_noLine">“마침내 파이썬에서도 흐름 제어를” 구조적 패턴 매칭을 사용하는 방법</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </rightSideBar>
+  </main>
+      <!-- footer -->
+      <footer>
+        <div id="footerBox">
+        <div id="companyInfo"><img src="image/logo_footer.png"></div>
+            <div id="bottomMenuBox">
+                <ul id="bottomMenuItem">
+                    <li><a href="#">회사소개  </a></li>
+                    <li><a href="#"> 구독신청  </a></li>
+                    <li><a href="#"> 개인정보 처리방침 </a></li>
+                    <li><a href="#"> 전자금융거래약관  </a></li>
+                    <li><a href="#"> 광고 안내  </a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </div>
+        <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 매개변수</title>
+    <script>
+        function input(){
+            let r = Number(prompt("테이블의 행수 입력"));
+            let c = Number(prompt("테이블의 열수 입력"));
+            makeTable(r,c);
+        }
+        function makeTable(r, c){
+            document.write("<table border='1'>");
+            for (let i=0; i<r; i++){
+                document.write("<tr>");
+                for(let j=0; j<c; j++){
+                    document.write("<td>★</td>");
+                    }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+        input();
+    </script>
+</head>
+<body onload="input()">
+</body>
+</html>

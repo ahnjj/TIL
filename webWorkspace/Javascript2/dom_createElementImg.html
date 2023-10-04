@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // event handler 니까 ;
+        window.onload = function(){
+            // 1 단계, 요소(노드) 생성 / 속성 설정
+            let imaaag = document.createElement('img');
+            // 속성 설정 : 동적으로 가능 (넓이 등)
+            imaaag.src = "image/bird.jpg";
+            imaaag.width = 250;
+            imaaag.height = 180;
+            imaaag.title = "예쁜 새";
+
+            // let imaaag2 = document.createElement('img');
+            // imaaag2.src = "image/A.png";
+            // imaaag.width = 250;
+            // imaaag.height = 180;
+            // imaaag.title = "예쁜 새";
+
+
+            // 2단계 : 문서에 출력 : body에 appendChild
+            document.body.appendChild(imaaag);
+            // document.body.appendChild(imaaag2);
+            // document.body.append(imaaag, imaaag2); 
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

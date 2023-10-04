@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        @media screen and (orientation:portrait){
+            body {background:red}
+        }
+
+        @media screen and (orientation:landscape){
+            body {background:green}
+        }
+
+        * {margin:0; padding: 0;} 
+        /* 바디 전체에 적용하겠다. */
+        /* body {margin:0; padding: 0;} 과 동일 */
+
+        div {
+            margin: 0 auto;
+            width: 50%;
+            max-width: 420px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border: solid 1px black;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image/사진.jpg" alt="">
+    </div>
+</body>
+</html>

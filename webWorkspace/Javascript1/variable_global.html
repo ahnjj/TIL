@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global variable</title>
+    <script>
+        let x = 5, y = 10; // let 명시적 선언 : global variable
+        total = 0; // global variable
+
+        function f1() {
+            x = x+ y;
+            document.write(x+"<br>");
+        }
+        function f2(){
+            total = x + y ;
+            document.write(total);
+        }
+        f1();
+        f2();
+        document.write("x:" + x + "<br>");
+        
+        name = 'jeong';
+        function showName(){
+            document.write("이름: "+name);
+        }
+        showName()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

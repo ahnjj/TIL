@@ -1,0 +1,21 @@
+# coding: utf-8
+
+pygame==2.5.0
+
+django==4.2.1
+python-dotenv==1.0.0
+django-environ==0.10.0
+
+openai==0.27.7
+django-bootstrap5==23.1
+
+# HTTP 요청
+requests
+
+beautifulsoup4
+
+# 장고 채널스 라이브러리
+channels[daphne]~=4.0.0
+
+# 구글번역 크롤링 통한 음성 생성 라이브러리
+gTTs==2.3.2

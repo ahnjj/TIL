@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소찾기</title>
+    <style>
+        #menuBox div {
+            background-color: green;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let $menuItem = $('.menuItem');
+
+            // index 값 출력 : <span>태그 출력
+            let $indexSpan = $('#indexSpan');
+
+            // 각 <div>객체에 대해 수행 : each() 메소드 사용
+            $menuItem.each(function(index){
+                $(this).hover(
+                    function(){         // 마우스 올렸을 때 수행되는 함수
+                        $(this).css('background','yellow');
+                        $indexSpan.text(index);
+                    },
+                    function(){         // 마우스 뗐을 때 수행되는 함수
+                        $(this).css('background','green');
+                        $indexSpan.text();  // text없애기
+                    }
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h2>인덱스: <span id="indexSpan">index</span></h2>
+        <div id="menuBox">
+            <div class="menuItem"></div>
+            <div class="menuItem"></div>
+            <div class="menuItem"></div>
+            <div class="menuItem"></div>
+        </div>
+    </div>
+</body>
+</html>

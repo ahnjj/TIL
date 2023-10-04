@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure- 익명함수</title>
+    <script>
+            // 클로져사용한 카운팅
+        function increase(){
+            let count = 0;    // 지역변수
+
+            // closure 반환
+            return function(){
+                return ++count;
+            }
+        }
+        let count = increase();
+
+        console.log(count());
+        console.log(count());
+        console.log(count());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+#opinion {
+    position: relative;
+    width:90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+#opinion table{
+    width: 500px;
+    height: 300px;
+}
+
+#opinion table td{
+    /* border: solid #cccccc 1px; */
+    background-color: #fcfbfb;
+}
+
+
+#opinion table .opi_title{
+    color: black;
+    font-size: 15px;
+
+}
+
+#opinion table td a{
+    text-decoration: none;
+    text-align: left;
+}
+.opi_title {
+    padding: 0 20px 0 20px;
+}
+
+/* 사진별 크기 */
+
+.opi_title_big{
+    font-size: 24px;
+    color: black;
+}
+
+#opi_box1 {
+    float: left;
+}
+#opi_box1 img {
+    width: 600px;
+    height: 430px;
+}
+#opi_box2 img {
+    width: 600px;
+}
+#opi_box3 img {
+    width: 600px;
+}
+#opi_box4 img {
+    width: 300px;
+    height: 220px;
+}
+#opi_box5 img {
+    width: 300px;
+    height: 220px;
+}
+#opi_box6 img {
+    width: 300px;
+    height: 220px;
+}
+#opi_box7 img {
+    width: 300px;
+    height: 220px;
+}
+#opi_box8 {
+    background-color: #0ABDFF;
+}
+
+#opi_box8 img {
+    width: 900px;
+}
+/* #opi_box1 img{
+    position: relative;
+    width: 300px;
+} */

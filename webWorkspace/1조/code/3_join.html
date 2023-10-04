@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입 폼 - 정건호</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/3_joinCheck.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/0_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/join.css">
+    <link rel="stylesheet" href="css/0_font.css">
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+  <div id="wrap">
+      <!-- header -->
+    <header>
+        <div id="headerBox">
+            <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+            <div id="topMenuBox">
+                <ul>
+                    <li><a href="2(login_page).html">로그인</a></li>
+                    <li><a href="3_join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    <nav>            
+        <div id="mainMenuBox">
+            <ul id="menuItem">
+              <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+              <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+              <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+              <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>
+              <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+              <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+            </ul>                    
+        </div>
+    </nav>
+    </header>
+  <!-- header끝 -->
+      <div id="text_area">
+        <div id="h2">
+          <h2>회원 가입</h2>
+        </div>
+        <!--h2 div 닫는 태그-->
+        <form
+          id="newMemberForm"
+          name="newMemberForm"
+          method="post"
+          action="newMemberOk.jsp"
+        >
+          <div id="id_area">
+            <div class="text_div" id="id_text">아이디<span class="req_color">*</span></div>
+            <div class="input_div" id="id_input">
+              <input
+                type="text"
+                id="id"
+                name="id"
+                placeholder="아이디를 입력해주세요"
+              />
+            </div>
+          </div>
+          <div id="password_area">
+            <div class="text_div" id="password_text">비밀번호<span class="req_color">*</span></div>
+            <div class="input_div" id="password_input">
+              <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요"/>
+            </div>
+          </div>
+          <div id="passwordCheck_area">
+            <div class="text_div" id="passwordCheck_text">비밀번호 확인<span class="req_color">*</span></div>
+            <div class="input_div" id="passwordCheck_input">
+              <input
+                type="password"
+                name="passwordCheck"
+                id="passwordCheck"
+                size="21" placeholder="비밀번호를 다시 한번 입력해주세요"
+              />
+            </div>
+          </div>
+          <div id="hp_area">
+            <div class="text_div" id="hp_text">휴대폰 번호<span class="req_color">*</span></div>
+              <div id="hp_box">
+                  <div class="input_div hp_div" id="hp_1_div">
+                    <input type="text" id="hp1"/>
+                  </div>
+                  <div class="hp-">
+                    
+                  </div> 
+                  <div class="input_div hp_div" id="hp_2_div">
+                    <input type="text" id="hp2"/>
+                  </div>
+                  <div class="hp-">
+                    
+                  </div>
+                  <div class="input_div hp_div" id="hp_3_div">
+                    <input type="text" id="hp3"/>
+                  </div> 
+              </div>
+
+          </div> <!--hp area 닫는 태그-->
+          <hr />
+          <!-- 14세 이상 체크 -->
+          <div id="adult_area">
+            <input type="radio" name="adult" value="yes" checked/>만 14세 이상입니다.
+            <input type="radio" name="adult" value="no" />만 14세 미만입니다.
+          </div>
+          <!-- 약관동의 -->
+          <div id="agree_area">
+            <div id="agree_all">
+              <label><input
+                type="checkbox"
+                id="agree_all_chkBox"
+                value="모든약관"
+                name="chkAll"
+                
+              /> 전체 약관 동의</label>
+            </div>
+            <hr />
+            <div class="agree_det">
+              <label
+                ><input
+                  type="checkbox"
+                  id="agreement1"
+                  value="agree_1_chkBox"
+                  name="chk"
+                  class="chk"
+                /> [필수] 이용약관 동의</label
+              >
+            </div>
+            <div class="agree_det">
+              <label
+                ><input
+                  type="checkbox"
+                  id="agreement2"
+                  value="agree_2_chkBox"
+                  name="chk"
+                  class="chk"
+                /> [필수] 개인정보 수집 및 이용 동의</label
+              >
+            </div>
+            <div class="agree_det">
+              <label
+                ><input
+                  type="checkbox"
+                  id="agreement3"
+                  value="agree_3_chkBox"
+                  name="chk"
+                  class="chk"
+                /> [필수] 개인정보 제3자 제공 동의</label
+              >
+            </div>
+            <div class="agree_det">
+              <label
+                ><input
+                  type="checkbox"
+                  id="agreement4"
+                  value="agree_4_chkBox"
+                  name="chk"
+                  class="chk"
+                /> [선택] 광고성 문자 수신 동의</label
+              >
+            </div>
+          </div>
+          <div id="join_div"><input type="submit" value="회원가입" /></div>
+        </form>
+      </div>
+      <!--text_area 닫는 태그-->
+
+        <!-- footer -->
+        <footer>
+          <div id="footerBox">
+          <div id="companyInfo"><img src="image/logo_footer.png"></div>
+              <div id="bottomMenuBox">
+                  <ul id="bottomMenuItem">
+                      <li><a href="#">회사소개  </a></li>
+                      <li><a href="#"> 구독신청  </a></li>
+                      <li><a href="#"> 개인정보 처리방침 </a></li>
+                      <li><a href="#"> 전자금융거래약관  </a></li>
+                      <li><a href="#"> 광고 안내  </a></li>
+                      <li><a href="#">인재채용</a></li>
+                  </ul>
+              </div>
+          <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+      </footer>
+    <!-- footer 끝 -->
+    </div>
+    <!--wrap div 닫는 태그-->
+  </body>
+</html>

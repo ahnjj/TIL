@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“AI의 심장” 머신러닝 알고리즘의 이해</title>
+    <link rel="stylesheet" href="css/5(detail_page).css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/0_menu.css">
+    <link rel="stylesheet" href="css/0_font.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/5(detail_page).js"></script>
+    <script src="js/index.js"></script>
+
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+          <div id="headerBox">
+              <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+              <div id="topMenuBox">
+                  <ul>
+                      <li><a href="2(login_page).html">로그인</a></li>
+                      <li><a href="3_join.html">회원가입</a></li>
+                  </ul>
+              </div>
+          </div>
+      <nav>            
+          <div id="mainMenuBox">
+              <ul id="menuItem">
+                  <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                  <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                  <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                  <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>
+                  <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+                  <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+              </ul>                    
+          </div>
+      </nav>
+      </header>
+   <!-- header끝 -->
+
+
+
+      <div id="content_detail">
+        <!--타이틀 area,내용,댓글 까지 담는 div-->
+        <div id="div_header_detail">
+          <!--상세 페이지의 카테고리, 제목, 기자 등의 div-->
+          <span class="sec_detail">AI</span>
+          <h2 id="news_title">“AI의 심장” 머신러닝 알고리즘의 이해</h2>
+          <!--기자명 , 게시 날짜 및 시간-->
+          <!--아이콘(기능) 글자 크기 설정 , 인쇄 , 공유 , 저장-->
+          <hr />
+        </div>
+        <!--detail header 닫는 태그-->
+        <div id="div_detail_text">
+          <div class="small_title_div">
+            <h3 class="small_title">머신러닝 알고리즘이란</h3>
+          </div>
+          <!--div_small_title 닫는 태그-->
+          <img src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/GettyImages-1438982991.jpg" alt="" id="img_detail" />
+          <span class="img_text">ⓒ Getty Image Bank</span>
+          <p class="">
+            머신러닝은 데이터로부터 자동으로 모델을 생성하는 방법이고, 머신러닝 알고리즘은 머신러닝을 움직이는 엔진이다. 즉, 데이터 집합을 모델로 바꿔주는 알고리즘이다. 지도, 비지도, 분류, 회귀 등 어떤 알고리즘이 가장 효과적인지는 해결하려는 문제의 종류, 가용한 컴퓨팅 리소스, 데이터의 속성에 따라 달라진다. 
+
+          </p>
+          <div class="small_title_div">
+          <h3 class="small_title">머신러닝의 작동 원리</h3></div>
+          <p class="">
+            일반적인 프로그래밍 알고리즘은 컴퓨터에 해야 할 일을 간단한 방식으로 알려준다. 예를 들어 정렬 알고리즘은 정렬되지 않은 데이터를 데이터에 있는 하나 이상 필드의 숫자 또는 알파벳 순서 등 특정 기준에 따라 정렬된 데이터로 변환한다.
+
+          </p>
+
+          <p class="">
+            선형 회귀 알고리즘은 직선, 또는 다항식과 같이 매개변수가 선형인 다른 함수를 수치 데이터에 맞추는데, 이를 위해 일반적으로 사용하는 방법은 선과 데이터 간의 제곱 오차를 최소화하기 위해 행렬 역변환을 수행하는 것이다. 제곱 오차를 척도로 사용하는 이유는 회귀선이 데이터 포인트 위에 있는지, 아래에 있는지는 중요하지 않기 때문이다. 중요한 것은 선과 포인트 간의 거리다. 
+
+          </p>
+          <p class="">
+            매개변수가 선형이 아닌 곡선을 데이터에 맞추는 비선형 회귀 알고리즘은 조금 더 복잡하다. 선형 회귀 문제와 달리 결정론적 방법으로 해결할 수 없기 때문이다. 대신 비선형 회귀 알고리즘은 일종의 반복적 최소화 프로세스를 구현하는데, 이는 급속 하강(steepest descent) 방법의 변형인 경우가 많다. 
+
+          </p>
+          <p class="">
+            급속 하강은 기본적으로 현재 매개변수 값에서 제곱 오차와 그 기울기를 계산하고, 단계 크기 즉, 학습률을 선택하고, 기울기 방향을 "아래로" 따라간 다음, 새로운 매개변수 값에서 제곱 오차와 그 기울기를 다시 계산한다. 운이 좋다면 최종적으로 이 과정은 수렴한다. 급속 하강에는 수렴 속성을 개선하고자 하는 여러 변형이 있다. 
+
+          </p>
+          <p class="">
+            머신러닝 알고리즘은 비선형 회귀보다도 더 복잡한데, 머신러닝은 다항식과 같은 특정 수학 함수에 맞추는 제약이 없다는 점도 그 이유 중 하나다. 머신러닝이 해결하는 대표적인 두 가지 문제 범주는 회귀와 분류다. 회귀는 수치 데이터, 분류는 비수치 데이터에 사용된다. 전자는 특정 주소와 직업을 가진 사람의 예상 수입은 어느 정도인가와 같은 문제, 후자는 대출 신청자가 이 대출을 상환하지 않을 것인가와 같은 문제다. 예측 문제(“내일 마이크로소프트 주식의 시초가는 얼마가 될까?”)는 시계열 데이터에 대한 회귀 문제의 하위 집합이다. 분류 문제는 이진(예/아니요), 다중 범주 문제(동물, 채소 또는 광물)로 나뉘기도 한다. 
+
+          </p>
+          <div class="small_title_div">
+          <h3 class="small_title">지도 학습 vs. 비지도 학습 </h3></div>
+          <p class="">
+            이러한 구분과 별개로 머신러닝 알고리즘에는 지도와 비지도, 2가지 종류가 있다. 지도 학습에서는 동물 이름이 딸린 일련의 동물 사진과 같은, 답변이 포함된 학습 데이터 집합을 제공한다. 이 학습의 목표는 이전에 본 적이 없는 사진을 올바르게 식별(학습 집합에 포함된 동물의 종류)할 수 있는 모델을 만드는 것이다. 
+
+          </p>
+          <p class="">
+            비지도 학습에서는 알고리즘이 스스로 데이터를 살펴보고 유의미한 결과를 도출하려고 시도한다. 예를 들어 각 클러스터 내에서 연관될 수 있는 데이터 포인트의 클러스터 집합이 결과로 나올 수 있다. 클러스터가 겹치지 않을 때 더 효과적으로 작동한다. 
+
+          </p>
+          <p class="">
+            학습과 평가를 통해 매개변수를 최적화해 데이터의 기준 진실과 가장 잘 일치하는 값 집합을 찾음으로써 지도 학습 알고리즘을 모델로 바꾼다. 알고리즘은 옵타마이저를 위해 예를 들어 확률적 경사 하강(SGD: 무작위 시작점에서 여러 번 수행되는 급속 하강이라고 할 수 있음)과 같은 급속 하강의 변형에 의존하는 경우가 많다. SGD의 일반적인 개선 방법은 운동량을 기반으로 경사의 방향을 수정하거나, 한 데이터 패스(에포크라고 함)에서 다음 패스로의 진행에 따라 학습률을 조정하는 요소를 추가하는 것이다. 
+
+          </p>
+          <hr />
+          <div id="like_div">
+            이 기사가 마음에 들었다면,
+            <span class="b">좋아요를 눌러주세요.</span>
+            <span id="smile_img_div"
+              ><img src="https://i.namu.wiki/i/AM26PqNQV9Rpvo4JvZTKSj7eHbZIiOdU7QLuZbAQB2rjIS_5YLEa3o_5oOaUvnK_-KiXqS0GS_evDEnCm1I1dQ.gif" alt="" id="smile_img" /> 좋아요
+              <span id="count_like"> 0</span></span
+            >
+          </div>
+
+          <!--누르면 좋아요 올라가는 시스템-->
+          <hr />
+        </div>
+        <!--div_detail_text 닫는 태그-->
+        <div id="div_comments">
+          <p>댓글</p>
+          <a href="2(login_page).html">
+            <div id="login_text_div" onclick="">
+            <p>로그인 후 댓글 작성이 가능합니다.</p>
+          </div></a>
+          <hr />
+          <div id="policy_cmm_div">
+            <a href="https://www.mk.co.kr/mypage/comment_info/">ℹ️댓글 정책</a>
+          </div>
+          <!--div_policy_cmm 닫는 태그-->
+          <div id="texts_cmm_div">지금 첫 번째 댓글을 작성해보세요.</div>
+        </div>
+      </div>
+      <!--detail_content 닫는 태그-->
+        <!-- footer -->
+        <footer>
+          <div id="footerBox">
+          <div id="companyInfo"><img src="image/logo_footer.png"></div>
+              <div id="bottomMenuBox">
+                  <ul id="bottomMenuItem">
+                      <li><a href="#">회사소개  </a></li>
+                      <li><a href="#"> 구독신청  </a></li>
+                      <li><a href="#"> 개인정보 처리방침 </a></li>
+                      <li><a href="#"> 전자금융거래약관  </a></li>
+                      <li><a href="#"> 광고 안내  </a></li>
+                      <li><a href="#">인재채용</a></li>
+                  </ul>
+              </div>
+          <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+      </footer>
+    </div>
+    <!--wrap 닫는 태그-->
+  </body>
+</html>

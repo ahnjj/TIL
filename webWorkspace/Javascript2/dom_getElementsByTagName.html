@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : getElementsByTagName </title>
+    <style>
+        #box {margin: 0 auto; width: 70%; text-align: center;}
+        td { width: 50px; height: 30px;}
+        table {margin: 0 auto; width: 70%;}
+    </style>
+    <script>
+        let tdArr = document.getElementsByTagName('td');
+
+        function setNumber(){
+            for(let i=0; i<tdArr.length; i++){
+                tdArr[i].innerHTML = i+1;
+            }
+        }
+        function setColor(){
+            let colorArr = new Array('red', 'orange', 'yellow','green','blue','navy','violet');
+
+            for(let i=0; i<tdArr.length; i++){
+                tdArr[i].style.background = colorArr[i];
+            }
+        }
+        function clearNumber(){
+            for(let i=0; i<tdArr.length; i++){
+                tdArr[i].innerHTML = '';
+            }
+        }
+        function clearColor(){
+            for(let i=0; i<tdArr.length; i++){
+                tdArr[i].style.background = '';
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="box">
+        <table border="1">
+            <tr>
+                <td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td>
+            </tr>
+        </table> <br><br>
+        <button id="setNumberBtn" onClick="setNumber()">셀에 번호 채우기</button>
+        <button id="setColorBtn" onClick="setColor()">셀에 색상 채우기</button><br><br>
+
+
+        <button id="clearNumberBtn" onClick="clearNumber()">셀에 번호 지우기</button>
+        <button id="clearColorBtn" onClick="clearColor()">셀에 색상 지우기</button><br><br>
+    </div>
+    
+</body>
+</html>

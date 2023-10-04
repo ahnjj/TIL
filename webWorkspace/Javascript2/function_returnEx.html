@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function return연습문제</title>
+    
+    <script>
+        function start(){
+            let check = confirm("성적을 입력하시겠습니까?");
+            if (check == true)
+                document.write(input());
+            else alert("종료합니다.");
+        }
+        function input(){
+            let kor = parseInt(prompt("국어 점수 입력"));
+            let eng = parseInt(prompt("영어 점수 입력"));
+            let math = parseInt(prompt("수학 점수 입력"));
+
+            return alert((kor+eng+math)/3);
+        } 
+        
+    </script>
+</head>
+<body>
+    <button onclick="start()">성적입력</button>
+</body>
+</html>

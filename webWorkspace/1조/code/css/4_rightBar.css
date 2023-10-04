@@ -1,0 +1,33 @@
+.rightSideBar {
+  text-align: center;
+  float: right;
+  width: 27%;
+  height: auto;
+  border: solid 1px #cccccc;
+
+}
+.news_list {
+  padding-left: 15px;
+  padding-right: 35px;
+}
+.news_list ol li div a:hover {
+  opacity: 0.7;
+}
+.news_list li::marker {
+  font-style: italic;
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+}
+
+.news_line {
+  height: 40px;
+  font-weight: 520;
+  text-align: left;
+  padding: 15px 0 13px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.news_noLine {
+  color: black;
+  text-decoration-line: none;
+}

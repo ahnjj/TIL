@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM append / prepend</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // <img>태그 내용을 img변수에 저장
+            let img = "<img src='image/banana.png'>";
+
+            // [prepend]버튼 클릭했을때
+            $('#prepend').on('click', function(){
+                //선택자 box의 내부 요소들 맨 앞에 img 삽입
+                $('#box').prepend(img);
+            });
+            $('#append').on('click',function(){
+                $('#box').append(img);
+            });
+
+            // [before] 버튼을 클릭했을때
+            $('#before').on('click', function(){
+                $('#box').before(img);
+            });
+            // after 버튼 누르면 : 선택자 box의 외부 뒤에 Img 삽입
+            $('#after').on('click', function(){
+                $('#box').after(img);
+            });
+
+            $('#empty').on('click', function(){
+                // box안을 비움 - 선택자 box안의 요소 제거
+                $('#box').empty(img);
+            });
+            $('#remove').on('click', function(){
+                // 선택자 제거(Img제거)
+                $('img').remove();
+            });
+            // initiate 초기화
+            $('#initiate').on('click', function(){
+                // 선택자 제거(Img제거)
+                $('img').remove();
+                $('div').empty().append("div 내부 <img src='image/apple.png'>");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <button id="prepend" >prepend</button> 
+    <button id="append" >append</button> 
+    <button id="before" >before</button> 
+    <button id="after" >after</button> 
+    <button id="empty" >empty</button> 
+    <button id="remove" >remove</button> 
+    <button id=initiate >초기화</button>
+    <p>
+    <div id="box">
+        div 내부 <img src='image/apple.png'>
+    </div>
+    
+</body>
+</html>

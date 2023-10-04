@@ -1,0 +1,74 @@
+
+/* 이번주의top10메뉴 */
+#top10{
+    float: right;
+	width: 370px; /*27%*/
+    padding-right: 30px;
+	text-align: left;
+}
+#topItem h2 {
+    padding-top: 10px;
+}
+
+#topItem li{
+    display: flex;
+    border-top: solid 1px #713b313d;
+    height: 80px;
+    margin-bottom: 3px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f2f2f2;
+}
+#topItem li h2 {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+#topItem li a{
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    padding: 10px 0 10px 0;
+    text-decoration: none; 
+    color: black;
+    font-style: bold;
+    /* font-size: large; */
+    
+}
+
+/* #topItem td{
+    font-weight: 520;
+    text-align: left;
+    padding: 16px 10px 16px 0;
+} */
+#topHeader{
+	height: 150px;
+	margin-left: 10%;
+    margin-top: 5%;
+}
+
+#bold {
+    text-align: left;
+	font-size: xx-large;
+	font-style: bold;
+}
+#italic {
+    text-align: left;
+	font-size: x-large;
+	font-style: italic;
+}
+/* #topItem a{
+    text-align: left;
+	text-decoration: none; 
+	/* font-size: ; */
+    /* color: black; */
+/* } */
+.articleNum {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: none;
+}
+
+.bor_bot {
+    border-bottom: 1px solid #cccccc;
+}

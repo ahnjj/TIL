@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm함수</title>
+    <script>
+        // 변수 사용 : Let
+        let isStudent = confirm("당신은 학생입니까?"); // [확인] / [취소]버튼
+
+        // [확인] 버튼 누르면 true값이 되어 변수 isStudent에 저장
+        if(isStudent == true) {
+            result = "학생입니다.";
+            discount = "50%";
+        }else {
+            result = "학생이 아닙니다.";
+            discount = "없음";
+        }
+        document.write("결과: "+result+"<br>");
+        document.write("할인율: "+discount);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

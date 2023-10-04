@@ -1,0 +1,15 @@
+/* 4개의 서로 다른 섹션 메뉴. 왼쪽 정렬 */
+
+#sectionMenuBox {
+  text-align: left;
+  float: left;
+  position: absolute;
+  visibility: hidden;
+}
+
+.sectionMenuItem ul {
+  display: none;
+  border: 1px solid black;
+  position: absolute;
+  float: left;
+}

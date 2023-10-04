@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</title>
+    <link rel="stylesheet" href="css/5(detail_page).css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/0_menu.css">
+    <link rel="stylesheet" href="css/0_font.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/5(detail_page).js"></script>
+    <script src="js/index.js"></script>
+
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+          <div id="headerBox">
+              <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+              <div id="topMenuBox">
+                  <ul>
+                      <li><a href="2(login_page).html">로그인</a></li>
+                      <li><a href="3_join.html">회원가입</a></li>
+                  </ul>
+              </div>
+          </div>
+      <nav>            
+          <div id="mainMenuBox">
+              <ul id="menuItem">
+                  <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                  <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                  <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                  <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>
+                  <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+                  <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+              </ul>                    
+          </div>
+      </nav>
+      </header>
+   <!-- header끝 -->
+
+
+      <div id="content_detail">
+        <!--타이틀 area,내용,댓글 까지 담는 div-->
+        <div id="div_header_detail">
+          <!--상세 페이지의 카테고리, 제목, 기자 등의 div-->
+          <span class="sec_detail">개발자</span>
+          <h2 id="news_title">“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</h2>
+          <!--기자명 , 게시 날짜 및 시간-->
+          <!--아이콘(기능) 글자 크기 설정 , 인쇄 , 공유 , 저장-->
+          <hr />
+        </div>
+        <!--detail header 닫는 태그-->
+        <div id="div_detail_text">
+          <div class="small_title_div">
+            <h3 class="small_title">파이파이의 작동 방식</h3>
+          </div>
+          <!--div_small_title 닫는 태그-->
+          <img src="https://www.itworld.co.kr/files/itworld/ITW_202308_01/GettyImages-1413990928.jpg" alt="" id="img_detail" />
+          <span class="img_text">ⓒ Getty Image Bank</span>
+          <p class="">
+            파이파이는 동적 언어를 위한 다른 JIT 컴파일러에도 있는 최적화 기법을 사용한다. 실행 중인 파이썬 프로그램을 분석하면서 생성 및 사용되는 객체의 형식 정보를 판단한 후 이 형식 정보를 가이드 삼아 속도를 높인다. 예를 들어 파이썬 함수가 한두 개의 객체 형식에서만 작동한다면 파이파이는 이러한 특정 사례를 처리하는 기계 코드를 생성한다. 파이파이의 최적화는 런타임에서 자동으로 처리되므로 일반적으로는 개발자가 직접 성능을 조정할 필요가 없다. 고급 사용자라면 파이파이의 명령줄 옵션을 변경하면서 특수한 사례를 위한 더 빠른 코드를 생성할 수 있지만 그럴 필요까지는 거의 없다. 
+          </p>
+          <p class="">
+            또한 파이파이는 몇몇 내부 함수를 처리하는 방식도 C파이썬과 다르지만 동작의 호환성을 유지하려고 노력한다. 예를 들어 파이파이의 가비지 수집 방식은 C파이썬과 달라서 범위에서 벗어나는 모든 객체가 즉각 수집되지는 않으므로 파이파이로 실행되는 파이썬 프로그램은 C파이썬으로 실행되는 경우에 비해 메모리 사용량이 더 높게 표시될 수 있다. 그러나 gc 모듈을 통해 노출되는 gc.enable(), gc.disable(), gc.collect()와 같은 파이썬의 고수준 가비지 수집 컨트롤을 여전히 사용할 수 있다. 
+
+          </p>
+
+          <p class="">
+            파이파이의 JIT 동작에 대한 정보가 필요하다면 파이파이에 포함된, 파이썬 애플리케이션에 대한 많은 JIT 후크를 노출하는 pypyjit라는 모듈을 활용하면 된다. JIT에서 성능이 떨어지는 함수 또는 모듈이 있는 경우 pypyjit를 사용해 세부적인 통계를 확인할 수 있다. 또 다른 파이파이 전용 모듈인 __pypy__는 파이파이만의 다른 기능을 노출하며 해당 기능을 활용하는 애플리케이션을 작성하는 데 유용하다. 파이썬의 런타임 동적 특성 덕분에 파이파이가 있을 때 이러한 기능을 사용하고, 없을 때는 무시하는 파이썬 애플리케이션을 만드는 것이 가능하다. 
+
+          </p>
+          <div class="small_title_div">
+          <h3 class="small_title">파이파이의 제약</h3></div>
+          <p class="">
+            파이파이는 매우 강력하지만 제약도 있다. 파이파이는 기본 C파이썬 런타임에 대한 완전한 범용 대체재는 아니다. 몇 가지 제약으로 인해 특정 종류의 프로그램에서는 파이파이의 효과가 줄어들거나 아예 사라진다. 가장 중요한 제한 사항은 다음과 같다. 
+
+          </p>
+          <p class="">
+            파이파이는 순수 파이썬 앱에서 가장 효과적 : 파이파이는 전통적으로 “순수” 파이썬 애플리케이션, 즉 다른 언어 없이 파이썬만으로 작성된 애플리케이션에서 최고의 효과를 발휘했다. 넘파이(NumPy)와 같이 C 라이브러리와 접촉하는 파이썬 패키지는 파이파이가 C파이썬의 네이티브 바이너리 인터페이스를 에뮬레이션하는 방식상 좋은 결과를 얻지 못했다. 파이파이 개발자들은 그동안 이 문제를 줄여 나가면서 C 확장에 의존하는 대다수 파이썬 패키지와의 호환성을 더 높였다. 예를 들어 넘파이는 지금은 파이파이에서 매우 잘 작동한다. 그러나 최대한의 C 확장 호환성을 원한다면 C파이썬을 사용해야 한다. 
+
+          </p>
+          <p class="">
+            파이파이는 장기간 실행되는 프로그램에서 가장 효과적 : 파이파이가 파이썬 프로그램을 최적화하는 방법의 특성상 장시간 실행되는 프로그램이 최적화 효과를 가장 많이 얻는다. 프로그램 실행 시간이 길수록 파이파이는 런타임 형식 정보를 더 많이 얻을 수 있고 최적화도 더 많이 할 수 있기 때문이다. 단발성 파이썬 스크립트는 이러한 혜택을 얻지 못한다. 이 효과를 얻는 애플리케이션은 일반적으로 오랜 시간 실행되는 루프가 있거나 백그라운드에서 지속적으로 실행되는 웹 프레임워크 같은 애플리케이션이다. 
+
+          </p>
+          <p class="">
+            파이파이는 AOT 컴파일을 하지 못함  : 파이파이는 파이썬 코드를 컴파일하지만 파이썬 코드용 컴파일러는 아니다. 파이파이의 최적화 수행 방법과 파이썬의 태생적인 동적 특성으로 인해 JIT 코드를 독립형 바이너리로 배출해서 재사용할 방법이 없다. 즉, 이 문서에 설명돼 있듯이 각 프로그램이 실행될 때마다 매번 컴파일해야 한다. 파이썬을 독립형 애플리케이션으로 실행할 수 있는 더 빠른 코드로 컴파일하고 싶다면 사이썬, 넘바(Numba), 또는 현재 실험 단계인 누이트카(Nuitka) 프로젝트를 사용해야 한다.
+editor@itworld.co.kr
+          </p>
+          <hr />
+          <div id="like_div">
+            이 기사가 마음에 들었다면,
+            <span class="b">좋아요를 눌러주세요.</span>
+            <span id="smile_img_div"
+              ><img src="https://i.namu.wiki/i/AM26PqNQV9Rpvo4JvZTKSj7eHbZIiOdU7QLuZbAQB2rjIS_5YLEa3o_5oOaUvnK_-KiXqS0GS_evDEnCm1I1dQ.gif" alt="" id="smile_img" /> 좋아요
+              <span id="count_like"> 0</span></span
+            >
+          </div>
+
+          <!--누르면 좋아요 올라가는 시스템-->
+          <hr />
+        </div>
+        <!--div_detail_text 닫는 태그-->
+        <div id="div_comments">
+          <p>댓글</p>
+          <a href="2(login_page).html">
+            <div id="login_text_div" onclick="">
+            <p>로그인 후 댓글 작성이 가능합니다.</p>
+          </div></a>
+          <hr />
+          <div id="policy_cmm_div">
+            <a href="https://www.mk.co.kr/mypage/comment_info/">ℹ️댓글 정책</a>
+          </div>
+          <!--div_policy_cmm 닫는 태그-->
+          <div id="texts_cmm_div">지금 첫 번째 댓글을 작성해보세요.</div>
+        </div>
+      </div>
+      <!--detail_content 닫는 태그-->
+        <!-- footer -->
+        <footer>
+          <div id="footerBox">
+          <div id="companyInfo"><img src="image/logo_footer.png"></div>
+              <div id="bottomMenuBox">
+                  <ul id="bottomMenuItem">
+                      <li><a href="#">회사소개  </a></li>
+                      <li><a href="#"> 구독신청  </a></li>
+                      <li><a href="#"> 개인정보 처리방침 </a></li>
+                      <li><a href="#"> 전자금융거래약관  </a></li>
+                      <li><a href="#"> 광고 안내  </a></li>
+                      <li><a href="#">인재채용</a></li>
+                  </ul>
+              </div>
+          <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+      </footer>
+    </div>
+    <!--wrap 닫는 태그-->
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous</title>
+    <script>
+        // asynchronous 아닌 일반 callback function
+        
+        // callback function(anonymous function)
+        let callback = function(){
+            console.log("콜백함수 호출됨");
+        };
+
+        function show(callback){
+            callback();
+        }
+        console.log('콜백함수 호출 전');
+        
+        show(callback);
+
+        console.log('콜백함수 호출 후');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

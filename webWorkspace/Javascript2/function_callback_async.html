@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // asynchronous callback function
+        
+        // callback function(anonymous function)
+        let callback = function(){
+            console.log("콜백함수 호출됨");
+        };
+
+        console.log('콜백함수 호출 전');
+        
+        // 타임아웃 : 3초후에 callback 함수 호출
+        setTimeout(callback,3000);
+
+        console.log('콜백함수 호출 후');
+
+
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

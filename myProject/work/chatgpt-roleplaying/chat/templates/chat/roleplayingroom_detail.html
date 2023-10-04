@@ -1,0 +1,144 @@
+{# chat/templates/chat/roleplayingroom_detail.html #}
+
+{% extends "chat/base.html" %}
+
+{% block extra-css %}
+<style>
+    #chat-message-list {
+        padding: 0;
+        list-style: none;
+    }
+    .chat-message .message {
+        background-color: #3b3b3d;
+        color: #e1e1e1;
+        border-radius: 0.8em;
+        padding: 0.4em;
+        margin: 0.4em 0;
+        display: inline-block;
+        white-space: pre-wrap;
+    }
+
+    .chat-message.me {
+        text-align: right;
+    }
+    .chat-message.me .message {
+        background-color: #1f8cff;
+        color: #fff;
+        text-align: left;
+    }
+</style>
+{% endblock %}
+
+{% block script %}
+{{ roleplayingroom.pk|json_script:"room-pk" }}
+
+<script>
+    function addMessage(message, isMe) {
+    const messageList = document.getElementById("chat-message-list");
+    const messageElement = document.createElement("li");
+    messageElement.className = "chat-message" + (isMe ? " me" : "");
+    messageElement.innerHTML = `<span class="message">${message}</span>`;
+    messageList.appendChild(messageElement);
+    messageList.scrollTop = messageList.scrollHeight;
+}
+(   function() {
+    const room_pk = document.querySelector("#room-pk").textContent;
+    const ws = new WebSocket(`ws://${window.location.host}/ws/chat/${room_pk}/`);
+
+    // 웹소켓에서 발생하는 4가지 이벤트 핸들러 (open/ close/ error/message)
+    ws.onopen = function(e) { console.log("장고 채널스 서버와 웹소켓 연결되었습니다."); };
+    ws.onclose = function(e) { console.log('장고 채널스 서버와 웹소켓 연결이 끊어졌습니다.'); };
+    ws.onerror = function(e) { console.error("장고 채널스 서버와의 웹소켓 연결 중에 오류가 발생했습니다.", e); };
+    // 서버로부터 웹소켓 메시지를 받았을 때 호출되는 함수.
+    ws.onmessage = function(e) {
+        console.group("[onmessage]");
+        // console.log(typeof e.data);
+        // console.log(e.data);
+
+        // 🔥 HERE
+        const message_obj = JSON.parse(e.data);
+
+        if ( message_obj.type === "assistant-message" ) {
+            const { message } = message_obj;
+            console.log("assistant-message:", message);
+            addMessage(message, false);
+        }
+        else if ( message_obj.type === "openai-error" ) {
+            const { message } = message_obj;
+            alert(`Error: ${message}`);
+        }
+        else {
+            console.error("알 수 없는 메시지 타입입니다.", message_obj);
+        }
+
+        console.groupEnd();
+    };
+
+    const messageForm = document.getElementById("message-form");
+    messageForm.onsubmit = function(e) {
+        e.preventDefault();
+        const message = e.target.message.value.trim();
+        if(message.length > 0) {
+            addMessage(message, true);
+            // 서버로 웹소켓 메시지를 전송하는 코드.
+            //  - 서버 단에서 "전달받은 문자열"을 JSON 디코딩하므로
+            //  - 클라이언트 단에서 JSON 인코딩한 문자열을 웹소켓으로 전달
+            ws.send(JSON.stringify({ type: "user-message", message: message }));
+            e.target.reset();
+        }
+    };
+})();
+</script>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    [{{ roleplayingroom.get_language_display }}
+                    {{ roleplayingroom.get_level_display }}]
+                    {{ roleplayingroom.situation }}
+                    ({{ roleplayingroom.gpt_role }}와 {{ roleplayingroom.my_role }}의 대화)
+                </div>
+                <div class="card-body">
+                    <ul id="chat-message-list">
+
+{# FIXME: 샘플 채팅 메세지 #}
+<li class="chat-message">
+    <span class="message">Good morning, welcome to Starbucks! What can I get for you today?</span>
+</li>
+<li class="chat-message me">
+    <span class="message">Yes, I would like a grande Americano with an extra shot of expresso and a splash of almond milk, please.</span>
+</li>
+<li class="chat-message">
+    <span class="message">Of course, that soulds like a great choice. Would you like any pastries or snacks to go with your coffee today?</span>
+</li>
+
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex gap-2">
+                        <form id="message-form" class="d-flex gap-1 flex-grow-1">
+                            <input type="text"
+                                   name="message"
+                                   placeholder="메시지를 입력하세요."
+                                   class="form-control flex-grow-1" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-3">
+        <a href="{% url 'role_playing_room_edit' roleplayingroom.pk %}" 
+           class="btn btn-primary">수정</a>
+    </div>
+    <div class="my-3">
+        <a href="{% url 'role_playing_room_edit' roleplayingroom.pk %}"
+           class="btn btn-primary">수정</a>
+        {# 🔥 HERE #}
+        <a href="{% url 'role_playing_room_delete' roleplayingroom.pk %}"
+           class="btn btn-danger">삭제</a>
+    </div>
+{% endblock %}

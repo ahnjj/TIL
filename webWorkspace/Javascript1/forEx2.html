@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEx1</title>
+    <script>
+        let plus = 0;
+        let minus = 0;
+        let zero = 0;
+        for(let i=1;i<=10;i++){
+            let a = parseInt(prompt("숫자"+i+"입력:"));
+            if (a==0){
+                zero ++
+            }else if (a>0){
+                plus++
+            }else{
+                minus++
+            }
+        }
+        document.write("양수의 개수 : ", plus+"<br>");
+        document.write("음수의 개수 : ", minus+"<br>");
+        document.write("0의 개수 : ", zero);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

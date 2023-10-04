@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수 반환값 연습문제</title>
+    <script>
+        function input(){
+            let num = new Array(5);
+            for (let i=0; i<5; i++){
+                num[i] = Number(prompt(i+1 + "번째 숫자 입력"));
+            }
+            return document.write("최대값 : "+ max(num));
+        }
+        function max(Array){
+            let max = 0;
+            Array.forEach(function(value,index,array){
+                if (max<value){
+                    max = value;
+                }
+            })
+            return max;
+        }
+        input()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

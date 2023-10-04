@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 연결 이벤트 </title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           // 2개버튼 추가하기 ! (한개 정적 / 한개 동적)
+           // createBtn 버튼 클릭했을 때
+           $('#createBtn').on('click', function(){
+                // 새 버튼 3개 생성 : 현재 버튼 뒤에 생성
+                // 길어서 2줄로 나눠 적을것!
+                $(this).after('<p><input type="button" id="newBtn1" value="새버튼1">' + 
+                    '<p><input type="button" id="newBtn2" value="새버튼2">');
+           });
+
+           // 새 버튼1에 click 이벤트 처리 : 동적 연결 방식 아님(정적 연결)
+           // 새로 생성된 요소에 이벤트 등록되지 않음
+           // 클릭해도 반응 없음
+           $('#newBtn1').on('click',function(){
+                alert('[새버튼1] 클릭했습니다.');
+           });
+
+           // 클릭하면 alert 뜸
+           $(document).on('click','#newBtn2', function(){
+                alert('[새버튼2] 클릭했습니다.');
+           });
+        });
+
+     </script>
+</head>
+<body>
+    <input type="button" id="createBtn" value="새버튼 만들기">
+</body>
+</html>

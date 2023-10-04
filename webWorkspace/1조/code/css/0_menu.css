@@ -1,0 +1,88 @@
+/* 모든 <ul> 태그에 적용 */
+
+ul {
+	margin-top:0;
+	padding:0;
+	list-style:none;   /* type 없음 */
+}
+
+/********** MAIN MENU ************/
+
+#mainMenuBox {
+	/* width:1280px; */
+	width:100%;
+	height:45px;
+	line-height:45px;
+	background-color:#ffffff;   /* white*/
+	z-index:20;  /* 스크롤 시 위 오도록 */
+	border-top:solid #cccccc 1px;
+	border-bottom:solid #cccccc 1px;
+}
+
+#mainMenuBox ul{ margin:0;}
+
+/* 메뉴 항목 */
+#mainMenuBox li {
+	float:left;
+	text-align:center;
+	width:16%;
+	height:30px;
+	line-height:30px;
+}
+
+
+#mainMenuBox ul li a {
+	text-decoration:none;
+	color:black;
+	font-size:18px;   /* pt 도 됨 */
+	font-weight:bold;
+}
+
+#mainMenuBox ul li a:hover {
+	color:#cccccc;
+}
+
+/* 
+/********** SUB MENU ************/
+/* 
+#subMenuBox {
+	width:1280px;
+	height:160px;
+	background-color:#ffffff;   /* white*/
+	/* text-align:center;
+	z-index:10;  /* 슬라이드 쇼 박스 위로 드롭다운 하도록 */
+	/* padding-bottom:0;
+	position:absolute;
+    visibility: hidden; /* 시작시 서브메뉴항목 숨김 */
+/* } 
+
+/* 
+.subMenuItem {
+	width:30%;
+	background-color:#ffffff;  
+	border-left:solid #cccccc 1px;
+	border-right:solid #cccccc 1px;
+	margin-top:10px;
+}*/ 
+/* submenu 30씩 차지 5~95 */
+/* #subMenuItem1 {
+	position:absolute;
+	margin-left:5%;
+} */ 
+
+/*
+.subMenuItem ul {background-color:#ffffff;  }
+
+.subMenuItem ul li {height:35px; line-height:35px;}
+
+.subMenuItem ul li a {
+	display:inline-block;
+	color:#333333;
+	text-decoration:none;
+}
+
+.subMenuItem ul li a:hover {
+	background-color:#ffffff; 
+	text-decoration:underline;
+	color:black;
+}*/

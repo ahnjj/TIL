@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 속성</title>
+    <style>
+        div#parent {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            border: solid 5px black;
+            /* margin: 50px 0 0 50px; top right bottom left (시계방향) */
+        }
+        #boxA, #boxB, #boxC {
+            width: 80px;
+            height: 80px;
+        }
+        #boxA { background-color: red;}
+        #boxB { background-color: green;}
+        #boxC { background-color: yellow;}
+
+        /* 1. boxB에 relative 위치 지정 */
+        /* relative : default인 static 기준 */
+        #boxB {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+
+        #fixedBox {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+
+    </div>
+
+    <div id="fixedBox"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    문서 끝
+</body>
+</html>
+
+    

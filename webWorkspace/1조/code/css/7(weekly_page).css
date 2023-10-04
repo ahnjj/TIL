@@ -1,0 +1,118 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  }
+  #news_group{
+	padding-bottom: 100px;
+  }
+
+  #content {
+	margin-top: 100px;
+  }
+  #h1_div h1{
+	font-style: italic;
+	font-size: 50px;
+  }
+
+  a { text-decoration: none;
+  color: inherit;}
+  #weekly_ul,
+  #item_ul {
+	list-style: none;
+  }
+  #weekly_ul li,
+  #item_ul li {
+	display: inline-block;
+  }
+  #weekly_ul {
+	display: block;
+	padding: 0 0 0 0;
+  }
+  #weekly_ul li {
+	height: 30px;
+	line-height: 30px;
+	/* background-color: beige; */
+	padding: 0;
+	margin: 0;
+	width: 206px;
+  }
+  #weekly_ul li a{
+	/* background-color: beige; */
+	/* display: inline-block; */
+	width: 206px;
+  }
+  #news_group {
+	width: 1210px;
+	margin: 0 auto;
+  }
+  #item_ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+  }
+  #news_group img {
+	width: 180px;
+	height: 180px;
+	float: left;
+  }
+  .item_group {
+	width: 500px;
+	margin: 0px 20px ;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #cccccc;
+  }
+  .time_area {
+	width: 15%;
+  }
+  .time_item {
+	font-size: 1.2rem;
+	font-weight: bold;
+	font-style: normal;
+  }
+  .time_ampm_item {
+	font-size: 10px;
+  }
+  .text-area {
+	text-align: left;
+	width: 45%;
+  }
+  .title_item {
+	font-size: 20px;
+	font-weight: bold;
+  }
+  .midtitle_item {
+	font-size: 10px;
+	padding-left: 2px;
+  }
+  .item_group:hover {
+	opacity: 0.65;
+  }
+
+
+/*********** weekly_item ********************/
+
+/* 탭 선택 표시 : js 파일에서 addClass()에서 사용하기 위한 클래스 선택자 */
+.selectedItem1 {
+	color:black;
+	background-color: #cccccc;
+	opacity: 0.5;
+	
+}
+.selectedItem2 {
+	background-color: black;
+	color: white;
+}
+
+/* content의 모든 div 숨김: display none */
+
+#weekly_item div.weekly-box {
+	display:none;
+	padding:0;
+	margin-top:20px;
+}
+
+/* 첫 번째 div 만 보임 */	
+#weekly_item div.weekly-box:first-child { display:block;}

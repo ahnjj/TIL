@@ -1,0 +1,112 @@
+/* 2_login.html css */
+
+#easyLogin {
+    list-style: none;
+}
+#form {
+    width: 30%;
+    margin: 0 auto;  
+}
+
+#wrap > div > div > h2 {
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    font-style: bold;
+}
+
+#id {
+    padding: 1px black;
+    width: 94%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    font-style: bold;
+    padding-left: 20px;
+    border: 1px bold;
+}
+
+#password {
+    padding: 1px black;
+    width: 94%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    font-style: bold;
+    padding-left: 20px;
+    border: 1px bold;
+}
+
+#login {
+    border: 1px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+/* 
+#searchEmail {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+} */
+
+li {
+    list-style-type: none;
+}
+
+#search {
+    font-size: 6px;
+    display: inline-flex;
+}
+
+#searchEmail {
+    width: 20%;
+    text-align: left;
+}
+
+#searchPassword {
+    width: 20%;
+    text-align: left;
+}
+
+#join {
+    width: 40%;
+    text-align: right;
+}
+
+
+.eslg {
+    text-align: center;
+    padding-left: 20px;
+}
+
+#oldSearch {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 50px;
+   
+}
+#oldSearch a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.searchAll {
+    display: inline-block;
+}
+
+.searchAll a{
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+}
+#searchEmail, #searchPassword, #join{
+    width: 25%;
+    text-align: center;
+}
+

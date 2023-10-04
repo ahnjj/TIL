@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데일리코드 모바일 섹션</title>
+  <link rel="stylesheet" href="css/4_section.css">
+  <link rel="stylesheet" href="css/4_highlight.css">
+  <link rel="stylesheet" href="css/4_rightBar.css">
+  <link rel="stylesheet" href="css/4_recent.css">
+  <link rel="stylesheet" href="css/0_menu.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/4_scripts.js"></script>
+</head>
+<body>
+  <header>
+    <!-- <div id="wrap"> -->
+      <!-- header -->
+     <header>
+         <div id="headerBox">
+             <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+             <div id="topMenuBox">
+                 <ul>
+                     <li><a href="2(login_page).html">로그인</a></li>
+                     <li><a href="3_join.html">회원가입</a></li>
+                 </ul>
+             </div>
+         </div>
+     <nav>            
+         <div id="mainMenuBox">
+             <ul id="menuItem">
+                <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>                 <li><a href="7(weekly_page).html">요일별</a></li>
+                <li><a href="6(ranking_news).html">인기뉴스</a></li>
+             </ul>                    
+         </div>
+     </nav>
+     </header>
+     <!-- 헤더 끝 -->
+  <main class="container"> <!-- 전체 메인 페이지 -->
+    <section class="dailyCodeITSection"> <!-- 기사가 들어갈 공간 -->
+      <div id="IThighlight"> <!-- 하이라이트 뉴스 -->
+        <ul id="mainHighlightNews">
+          <li class="highlight1"> <!-- 얘가 제일 큰 부분 -->
+            <div>
+              <a href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/299467" id="bigNews_banner">
+                <div>
+                  <img id="bigNews_image" src="https://www.itworld.co.kr/files/itworld/ITW_202307_02/ios-17-logo-colors-11.jpg" alt="개발자">
+                </div>
+                <div id="bigNews_text">
+                  <p style="color: white; font-weight: bold;">모바일</p><br>
+                  <h3>“출시 초기에는 못 쓴다” 연말 이후<br>누릴 수 있는 iOS 17 기능 5가지</h3>
+                  <p class="greyInfo">20분 전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="highlight2"> <!-- 작은 기사1 -->
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/294031">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202306_01/android-battery-life-100941771-l.jpg" alt="에이닷">
+                  <h3 class="highText">“이 습관만 들여도 오래 쓴다”<br>스마트폰 배터리 수명 관리 꿀팁</h3>
+                  <p class="greyInfo">3시간 전</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/293305">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW_202306_01/watchOS-10-Smart-Stack.jpg" alt="에이닷">
+                  <h3 class="highText">스마트워치와의 상호작용을<br>재설계한 워치OS 10의 변화</h3>
+                  <p class="greyInfo">2023.08.15</p>
+                </div>
+              </a>
+            </div>
+            <div class="subHigh">
+              <a class="subInline" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/290551">
+                <div>
+                  <img class="subHighImg" src="https://www.itworld.co.kr/files/itworld/ITW202305_01/passkey-sync.png" alt="에이닷">
+                  <h3 class="highText">"비밀번호 그 이상을 원한다면"<br>구글 계정으로 패스키 설정하기</h3>
+                  <p class="greyInfo">2023.08.02</p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ITart">
+        <article id="recentArticle">
+          <h3>모바일 최신 뉴스</h3> <!-- 하단 뉴스 -->
+          <hr>
+          <ul class="overHidden" id="recentNews_Area">
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/61023/%EA%B0%9C%EB%B0%9C%EC%9E%90/300889">
+                  <div class="recentText">
+                    <h3 class="overHidden">전 세계 모바일 기기 다수에서 6개월 이상 탐지되지 않고 동작한 멀웨어 캠페인을 비트디펜더가 발견했다. 이 캠페인은 수익 창출을 목적으로 안드로이드 기기에 애드웨어를 배포하도록 설계됐다.</h3>
+                    <p class="greyInfo">1시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://130e178e8f8ba617604b-8aedd782b7d22cfe0d1146da69a52436.ssl.cf1.rackcdn.com/mobile-malware-showcase_image-8-a-8806.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/280681">
+                  <div class="recentText">
+                    <h3 class="overHidden">시스코 시스템즈가 ‘모바일 월드 콩그레스(MWC) 2023’에서 삼성전자와의 파트너십을 확대한다고 발표했다. 시스코는 자사 협업 솔루션인 ‘웹엑스(Webex)’를 삼성전자의 스마트폰 ‘갤럭시 S23’과 ‘갤럭시 Z 폴드4’에 적용해 하이브리드</h3>
+                    <p class="greyInfo">5시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202303_01/0307_cisco.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/280435">
+                  <div class="recentText">
+                    <h3 class="overHidden">전 세계 IT 업체가 스페인 바르셀로나에 모였다. 예상대로 스마트폰과 웨어러블, 노트북을 비롯한 수많은 디지털 디바이스가 전시장을 가득 채웠다. Computerwoche가 뽑은 2023년 MWC 최고의 디바이스를 소개한다.</h3>
+                    <p class="greyInfo">6시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202303_01/890xmwc.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/280135">
+                  <div class="recentText">
+                    <h3 class="overHidden">WWDC가 2023년 6월 개최된다. 매년 그렇듯 애플은 기조연설로 WWDC의 문을 열고 새 운영체제인 iOS 17, 아이패드OS 17, 맥OS 14, 워치OS 10, tvOS 17을 공개할 것이다. 올해 버전은 화려한 새 기능보다는</h3>
+                    <p class="greyInfo">7시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202303_01/ios-17-graphic-2.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/277525">
+                  <div class="recentText">
+                    <h3 class="overHidden">아이언소스가 앱 및 게임 관련 종사자들을 위해 ‘2023년 모바일 마케팅 전망’을 발표했다. 새로운 한 해를 시작하며 현재까지의 모바일 마케팅 분야를 살펴보면, 혁신의 속도는 빠르게 진화하는 시장 변화 속도만큼 빠르며,</h3>
+                    <p class="greyInfo">13시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202302_01/0214_aura.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/276325">
+                  <div class="recentText">
+                    <h3 class="overHidden">ChatGPT가 전 세계에 돌풍을 일으키고 있는 가운데, 악용을 경고하는 목소리도 끊이질 않고 있다. 2016년부터 엔터프라이즈 전문 소프트웨어 업체로 전향한 블랙베리가 영국의 IT 의사결정권자 500명을 대상으로 벌인 설문조사에서도 비관적 전망이 두드러졌다.</h3>
+                    <p class="greyInfo">18시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/ciokr/2023/02/manufacturing%20consent.jpeg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/275077">
+                  <div class="recentText">
+                    <h3 class="overHidden">토스의 통신 자회사 ‘토스모바일’은 사전신청자를 대상으로 서비스를 시작했다고 밝혔다. 토스모바일은 앞서 진행한 사전신청에서 미사용 데이터 캐시백, 토스페이 연계 멤버십, 편리한 개통 절차 등 차별성으로 나흘간 17만 명 이상의 신청자를 모았다.</h3>
+                    <p class="greyInfo">22시간 전</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202301_02/0130_toss.png" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/274381">
+                  <div class="recentText">
+                    <h3 class="overHidden">애플이 지도, 온라인 광고, 검색 등 주요 스마트폰 서비스에서 우위를 얻겠다는 전략을 실행하고 있다고 파이낸셜 타임즈가 보도했다. 2명의 전직 애플 엔지니어를 인용한 기사에 따르면 애플은 명시적으로 눈에 띄지는 않지만</h3>
+                    <p class="greyInfo">2023.08.28</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202301_02/0126_2_iphone-pixel-100919409-large.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/274351">
+                  <div class="recentText">
+                    <h3 class="overHidden">널리 알려져 있듯이, 사이버 사고에는 인간적인 요소가 포함되는 경우가 많으며, 임원들은 모두 너무 인간적이다. ‘버라이즌 2022 데이터 침해 조사 보고서’에 따르면, 82%의 침해가 인적 요소와 관련되어 있으며, 상당수가 피싱</h3>
+                    <p class="greyInfo">2023.08.27</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/ciokr/2023/01/GettyImages-618557544.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a class="recentNews" href="https://www.itworld.co.kr/t/37/%EB%AA%A8%EB%B0%94%EC%9D%BC/269991">
+                  <div class="recentText">
+                    <h3 class="overHidden">알서포트는 굿모닝아이텍이 ‘리모트콜’을 활용해 원격으로 가상화 인프라를 효율적으로 유지·보수하고 있다고 설명했다. 굿모닝아이텍은 많은 가상화 엔지니어를 보유하고 공공 및 금융기관, 제조, 의료 등 다양한 분야의 고객사를 지원하고 있다.</h3>
+                    <p class="greyInfo">2023.08.27</p>
+                  </div>
+                  <div>
+                    <img class="recentThumb" src="https://www.itworld.co.kr/files/itworld/ITW_202212_02/1219_rsupport.jpg" alt="">
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <a href="#" id="load_more">더 보기</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <rightSideBar class="rightSideBar"> <!-- 오른쪽 '많이 본 기사' 목록바 -->
+      <header> <!-- 큰 글자 -->
+        <h2>많이 본 기사</h2>
+        <a href=""></a>
+      </header>
+      <div class="news_list">
+        <ol>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304555" class="news_noLine">공급 긴장 완화되자 AI에 주목하는 네트워크 업계</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/304285" class="news_noLine">“프로그래밍 언어 개발의 감초” LLVM의 이해와 활용 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/304657" class="news_noLine">“윈도우 버리지 않을 이유가 사라졌다” 물음표를 느낌표로 바꾼 크롬OS</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/mainnews/303817" class="news_noLine">VR 헤드셋 시대, 프라이버시가 위험하다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/302293" class="news_noLine">“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301831" class="news_noLine">런웨이 젠2 활용한 SF 단편영화 제작기</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301735" class="news_noLine">더 강력한 생성형 AI 규제가 필요한 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301639" class="news_noLine">AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/301501" class="news_noLine">LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ 노렸다</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298543" class="news_noLine">“게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298345" class="news_noLine">놓치지 말아야 할 ‘윈도우 11’ 꿀기능 10가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297979" class="news_noLine">파이널 판타지 16 리뷰 | 액션에 스타일 더한 가장 어두운 판타지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/298057" class="news_noLine">글로벌 칼럼 | 센트OS 대안으로 또 다른 RHEL 클론을 선택해선 안 되는 이유</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297835" class="news_noLine">AI 규제에 적극 동조하는 마이크로소프트의 뻔한 속내</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297433" class="news_noLine">소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297307" class="news_noLine">윈도우 11 작업 표시줄 맞춤 설정 6가지</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/297259" class="news_noLine">“사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망</a>
+            </div>
+          </li>
+          <li class="news_line">
+            <div>
+              <a href="https://www.itworld.co.kr/topnews/303895" class="news_noLine">“마침내 파이썬에서도 흐름 제어를” 구조적 패턴 매칭을 사용하는 방법</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </rightSideBar>
+  </main>
+      <!-- footer -->
+      <footer>
+        <div id="footerBox">
+        <div id="companyInfo"><img src="image/logo_footer.png"></div>
+            <div id="bottomMenuBox">
+                <ul id="bottomMenuItem">
+                    <li><a href="#">회사소개  </a></li>
+                    <li><a href="#"> 구독신청  </a></li>
+                    <li><a href="#"> 개인정보 처리방침 </a></li>
+                    <li><a href="#"> 전자금융거래약관  </a></li>
+                    <li><a href="#"> 광고 안내  </a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </div>
+        <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+    </footer>
+</body>
+</html>

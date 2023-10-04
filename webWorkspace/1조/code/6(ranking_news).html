@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위클리연재</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/0_menu.css">
+    <link rel="stylesheet" href="css/0_font.css">
+    <link rel="stylesheet" type="text/css" href="css/rankMainMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/rankMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/7(weekly_page).js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/rankImgDy.js"></script> 
+    
+  </head>
+  <body>
+    <div id="wrap">
+        <!-- header -->
+       <header>
+           <div id="headerBox">
+               <div id="logoBox"><a href="index.html"><img src="image/logo_header.png" id="logoImg"></a></div>
+               <div id="topMenuBox">
+                   <ul>
+                       <li><a href="2(login_page).html">로그인</a></li>
+                       <li><a href="3_join.html">회원가입</a></li>
+                   </ul>
+               </div>
+           </div>
+       <nav>            
+           <div id="mainMenuBox">
+               <ul id="menuItem">
+                  <li><a href="4-1section.html" id="showAllMenu">AI</a></li>
+                  <li><a href="4-2section.html" id="showAllMenu">게임</a></li>
+                  <li><a href="4-3section.html" id="showAllMenu">개발자</a></li>
+                  <li><a href="4-4section.html" id="showAllMenu">모바일</a></li>                   <li><a href="7(weekly_page).html" id="showAllMenu">요일별</a></li>
+                  <li><a href="6(ranking_news).html" id="showAllMenu">인기뉴스</a></li>
+               </ul>                    
+           </div>
+       </nav>
+       </header>
+    <!-- header끝 -->
+    <div id="rankNewsWrap">
+        <div id="rankMainMenuBox"> 
+            <ul id="rankMainMenuItem">
+                <li id="mainMenuAi"><a href="#">AI</a></li>
+                <li id="mainMenuPro"><a href="#">프로그래밍</a></li>
+                <li id="mainMenuGame"><a href="#">게임</a></li>
+                <li id="mainMenuDev"><a href="#">개발자</a></li>
+            </ul>
+        </div>
+        <br><br>
+
+      
+        <div id="rankNews"> <!-- 랭크 뉴스 -->    
+            <div id="rankNewsBox">					
+                <div id="rankImgBox"> <!-- 랭크 뉴스 이미지 박스 -->
+                    <div class="rankImgAll" id="rankImg1">
+                        <h2 class="rankImgTilte">AI NEWS TOP 4</h2><hr>
+                        <ul id="slidePanel">
+                            <li class="slideImage">
+                                <a href="https://www.aitimes.kr/news/articleView.html?idxno=28831">
+                                    <img src="image/rankImg001.jpg" width="310" height="270" alt="" >
+                                </a>                  
+                                <div class="rankImg_item">
+                                        <a href="https://www.aitimes.kr/news/articleView.html?idxno=28831">국가장학금 신청자 제출 서류에 AI 시스템 적용!...애자일소다, 한국장학재단 AI OCR 시스템 구축</a>
+                                    <br><span class="rankImg_item_time">8시간전</span>
+                                </div>  
+                            </li>                            
+                            <li> 
+                                <a href="https://www.aitimes.kr/news/articleView.html?idxno=28830">
+                                    <img src="image/rankImg002.jpg" width="310" height="270" alt="">
+                                </a>             
+                                <div class="rankImg_item">
+                                    <a href="https://www.aitimes.kr/news/articleView.html?idxno=28830" class="rankImg_item">알리바바, 이미지 이해 기능 갖춘 생성 AI '대형 시각 언어 모델' 오픈소스로 공개</a>
+                                    <br><span class="rankImg_item"> 7시간전</span>
+                                </div>
+                            </li>                            
+                            <li>
+                                <a href="https://www.aitimes.kr/news/articleView.html?idxno=28828">
+                                    <img src="image/rankImg003.jpg" width="310" height="270" alt=""  >
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.aitimes.kr/news/articleView.html?idxno=28828" class="rankImg_item_par">최대 규모 코드생성 AI 모델 'IBM Z용 왓슨x 코드 어시스턴트' 발표, 1조 5천억 개 토큰으로 학습된 115개 코딩 언어 기반
+                                        </a>
+                                    <br><span class="rankImg_item_time">4시간전</span>
+                                </div>  
+                            </li>                            
+                            <li>
+                                <a href="https://www.itworld.co.kr/mainnews/303817">
+                                    <img src="image/rankImg004.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/mainnews/303817" class="rankImg_item_par">NHN클라우드, 진일보한 AI 추론 성능!...델 파워엣지 서버 기반, '광주 AI 데이터센터' 구축
+                                    </a>
+                                    <br><span class="rankImg_item_time">3시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/302293">
+                                    <img src="image/rankImg005.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/302293" class="rankImg_item_par">“윈도우 버리지 않을 이유가 사라졌다” 물음표를 느낌표로 바꾼 크롬OS</a>
+                                    <br><span class="rankImg_item_time">9시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/301831">
+                                    <img src="image/rankImg006.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/301831" class="rankImg_item_par">VR 헤드셋 시대, 프라이버시가 위험하다
+                                    </a>
+                                    <br><span class="rankImg_item_time">11시간전</span>
+                                </div>  
+                            </li>
+                        </ul> 
+                    </div> <!-- rankImg1 끝 -->
+                    
+                    
+                    <div class="rankImgAll" id="rankImg2">
+                        <h2 class="rankImgTilte">프로그래밍 NEWS TOP 4</h2><hr>
+                        <ul>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/302293">
+                                    <img src="image/rankImg007.jpg" width="320" height="240" alt="">
+                                </a>                  
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/302293" class="rankImg_item_par">“더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li> 
+                                <a href="https://www.itworld.co.kr/topnews/301831">
+                                    <img src="image/rankImg008.jpg" width="320" height="240" alt="">
+                                </a>             
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/301831" class="rankImg_item_par">런웨이 젠2 활용한 SF 단편영화 제작기</a>
+                                    <br><span class="rankImg_item">시간전</span>
+                                </div>
+                            </li>                            
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/301735">
+                                    <img src="image/rankImg009.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/301735" class="rankImg_item_par">더 강력한 생성형 AI 규제가 필요한 이유</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/301639">
+                                    <img src="image/rankImg010.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/301639" class="rankImg_item_par">AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/301501">
+                                    <img src="image/rankImg011.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/301501" class="rankImg_item_par">LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ 노렸다</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/298543">
+                                    <img src="image/rankImg012.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="https://www.itworld.co.kr/topnews/298543">
+                                    <a href="#" class="rankImg_item_par">“게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div> <!-- rankImg2 끝 -->
+                    
+                    <div class="rankImgAll" id="rankImg3">
+                        <h2 class="rankImgTilte">게임 NEWS TOP 4</h2><hr>
+                        <ul>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/298345">
+                                    <img src="image/rankImg013.jpg" width="320" height="240" alt="">
+                                </a>                  
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/298345" class="rankImg_item_par">놓치지 말아야 할 ‘윈도우 11’ 꿀기능 10가지</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li> 
+                                <a href="https://www.itworld.co.kr/topnews/297979">
+                                    <img src="image/rankImg014.jpg" width="320" height="240" alt="">
+                                </a>             
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/297979" class="rankImg_item">파이널 판타지 16 리뷰 | 액션에 스타일 더한 가장 어두운 판타지</a>
+                                    <br><span class="rankImg_item">시간전</span>
+                                </div>
+                            </li>                            
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/298057">
+                                    <img src="image/rankImg015.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/298057" class="rankImg_item_par">글로벌 칼럼 | 센트OS 대안으로 또 다른 RHEL 클론을 선택해선 안 되는 이유</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/297835">
+                                    <img src="image/rankImg016.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/297835" class="rankImg_item_par">AI 규제에 적극 동조하는 마이크로소프트의 뻔한 속내</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/297433">
+                                    <img src="image/rankImg017.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/297433" class="rankImg_item_par">소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/297307">
+                                    <img src="image/rankImg018.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/297307" class="rankImg_item_par">윈도우 11 작업 표시줄 맞춤 설정 6가지</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div> <!-- rankImg3 끝 -->
+                    
+                    <div class="rankImgAll" id="rankImg4">
+                        <h2 class="rankImgTilte">개발자 NEWS TOP 4</h2><hr>
+                        <ul>
+                            <li>
+                                <a href="https://www.itworld.co.kr/topnews/297259">
+                                    <img src="image/rankImg019.jpg" width="320" height="240" alt="">
+                                </a>                  
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/297259" class="rankImg_item_par">“사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li> 
+                                <a href="https://www.itworld.co.kr/topnews/303895">
+                                    <img src="image/rankImg020.jpg" width="320" height="240" alt="">
+                                </a>             
+                                <div class="rankImg_item">
+                                    <a href="https://www.itworld.co.kr/topnews/303895" class="rankImg_item">“마침내 파이썬에서도 흐름 제어를” 구조적 패턴 매칭을 사용하는 방법</a>
+                                    <br><span class="rankImg_item">시간전</span>
+                                </div>
+                            </li>                            
+                            <li>
+                                <a href="#">
+                                    <img src="image/rankImg021.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="#" class="rankImg_item_par">‘메타버스의 시대가 끝났다고?’, 메타버스 사업에 손 뻗는 게임사들</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>                            
+                            <li>
+                                <a href="#">
+                                    <img src="image/rankImg022.jpg" width="320" height="240" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="#" class="rankImg_item_par">'세계 개발자의 축제'…삼성 개발자 콘퍼런스 10월 5일 열려</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="image/rankImg023.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="#" class="rankImg_item_par">“네이버는 AI, 카카오는 NFC”…신사업 ‘확’ 눈에 띄네[가봤어요]</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="image/rankImg024.jpg" width="310" height="270" alt="">
+                                </a>
+                                <div class="rankImg_item">
+                                    <a href="#" class="rankImg_item_par">구글도 못 푼 '의료 AI' 데이터 공유 문제, 해답은?</a>
+                                    <br><span class="rankImg_item_time">시간전</span>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div> <!-- rankImg4 끝 -->
+
+                </div> <!-- rankImgBox 끝 -->
+                <br><br><hr>
+            
+                <div id="rankTopBox"> <!-- 랭크 뉴스 TOP 20 -->
+                    <div id="rankTopTitleBox"> 
+                        <h2>종합 랭킹 TOP 20</h2>
+                    </div>
+                    <hr>
+                    <div class="rankTop" id="rankTop1">
+                        <ul>
+                            <li>
+                                
+                                    <div class="list_ranking_num">1.&nbsp;</div>                  
+                                    <div class="list_content">
+                                        <a href="https://www.itworld.co.kr/topnews/304555" class="list_content_par">공급 긴장 완화되자 AI에 주목하는 네트워크 업계</a>
+                                        <br><span class="list_content_time">5시간전</span>
+                                    </div>  
+                                    <div class="list_img">
+                                        <a href="https://www.itworld.co.kr/topnews/304555">
+                                            <img src="image/rank001.jpg" width="100" height="100" alt="">
+                                        </a>
+                                    
+                             </div>
+                            </li>
+                            <hr>                      
+                            <li>
+                               
+                                <div class="list_ranking_num">2.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/304285" class="list_content_par">“프로그래밍 언어 개발의 감초” LLVM의 이해와 활용 방법 &nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">6시간전</span>
+                                </div>  
+                                <div  class="list_img">
+                                <a href="https://www.itworld.co.kr/topnews/304285">
+                                    <img src="image/rank002.jpg" width="100" height="100" alt="">
+                                </a>
+                            
+                            </div>
+                            </li>
+                            <hr>                            
+                            <li>
+                                
+                                <div class="list_ranking_num">3.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://zdnet.co.kr/view/?no=20230821083635" class="list_content_par">사람인, AI가 경력 이력서 초안 잡아준다 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">7시간전</span>
+                                </div>  
+                                <div  class="list_img">
+                                <a href="https://zdnet.co.kr/view/?no=20230821083635">
+                                    <img src="image/rank003.jpg" width="100" height="100" alt="">
+                                </a>
+                            
+                            </div>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">4.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://zdnet.co.kr/view/?no=20230814000655" class="list_content_par">“中 샤오미·오포·비보 "우리도 챗GPT 있다" &nbsp&&nbsp&&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">8시간전</span>
+                                </div>  
+                                <a href="https://zdnet.co.kr/view/?no=20230814000655">
+                                    <img src="image/rank004.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="list_ranking_num">5.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/mainnews/304657" class="list_content_par">윈도우 버리지 않을 이유가 사라졌다” 물음표를 느낌표로 바꾼 크롬OS &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">7시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/mainnews/304657">
+                                    <img src="image/rank005.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">6.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/mainnews/303817" class="list_content_par">VR 헤드셋 시대, 프라이버시가 위험하다 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">9시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/mainnews/303817">
+                                    <img src="image/rank006.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">7.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/302293" class="list_content_par">더 쉽고 빠른 파이썬” 파이파이(PyPy)의 이해 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">4시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/302293">
+                                    <img src="image/rank007.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">8.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/301831" class="list_content_par">런웨이 젠2 활용한 SF 단편영화 제작기 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">9시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/301831">
+                                    <img src="image/rank008.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="list_ranking_num">9.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/301735" class="list_content_par">L더 강력한 생성형 AI 규제가 필요한 이유 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">2시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/301735">
+                                    <img src="image/rank009.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">10.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/301639" class="list_content_par">AMD 라데온 튜닝 가이드 : 그래픽 카드를 최적화하는 6가지 방법 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">4시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/301639">
+                                    <img src="image/rank010.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>    
+                        </ul>
+                    </div> <!--rankTop1 끝-->
+                
+                    <div class="rankTop" id="rankTop2">
+                        <ul>
+                            <li>
+                                <div class="list_ranking_num">11.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/301501" class="list_content_par">LG 그램 슈퍼슬림 리뷰ㅣ‘틈새시장’ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">6시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/301501">
+                                    <img src="image/rank011.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">12.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/298543" class="list_content_par">게임기 아닌 다목적 PC” 스팀 덱을 데스크톱 PC로 쓰는 방법 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">7시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/298345">
+                                    <img src="image/rank012.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">13.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/297979" class="list_content_par">파이널 판타지 16 리뷰 | 액션에 스타일 더한 가장 어두운 판타지 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">13시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/297979">
+                                    <img src="image/rank013.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">14.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/298057" class="list_content_par">글로벌 칼럼 | 센트OS 대안으로 또 다른 RHEL 클론을 선택해선 안 되는 이유 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">11시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/298057">
+                                    <img src="image/rank014.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="list_ranking_num">15.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/297835" class="list_content_par">AI 규제에 적극 동조하는 마이크로소프트의 뻔한 속내 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">5시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/297835">
+                                    <img src="image/rank015.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">16.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/297433" class="list_content_par">소프트웨어 개발 파트너십을 위한 5가지 베스트 프랙티스 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">7시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/297433">
+                                    <img src="image/rank016.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">17.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/297307" class="list_content_par">윈도우 11 작업 표시줄 맞춤 설정 6가지 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">11시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/297307">
+                                    <img src="image/rank017.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">18.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/297259" class="list_content_par">“사라지거나, 증강되거나, 새로 생기거나” AI 시대 ‘일자리’ 전망 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">16시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/297259">
+                                    <img src="image/rank018.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="list_ranking_num">19.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://www.itworld.co.kr/topnews/303895" class="list_content_par">“마침내 파이썬에서도 흐름 제어를” 구조적 패턴 매칭을 사용하는 방법 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">22시간전</span>
+                                </div>  
+                                <a href="https://www.itworld.co.kr/topnews/303895">
+                                    <img src="image/rank019.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>                            
+                            <li>
+                                <div class="list_ranking_num">20.&nbsp;</div>                  
+                                <div class="list_content">
+                                    <a href="https://zdnet.co.kr/view/?no=20230831123048" class="list_content_par">"오픈AI, 연매출 1.3조원 무난…유료 구독자 2만명" &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                                    <br><span class="list_content_time">8시간전</span>
+                                </div>  
+                                <a href="https://zdnet.co.kr/view/?no=20230831123048">
+                                    <img src="image/rank020.jpg" width="100" height="100" alt="">
+                                </a>
+                            </li>
+                            <hr>
+                        </ul>
+                    </div> <!--rankTop1 끝-->
+                </div> <!-- tabContent 끝 -->					
+            </div>	<!--rankNewsBox 끝-->    
+        </div> <!--rankNews 끝-->
+    </div>
+
+      <!-- footer -->
+        <footer>
+            <div id="footerBox">
+            <div id="companyInfo"><img src="image/logo_footer.png"></div>
+                <div id="bottomMenuBox">
+                    <ul id="bottomMenuItem">
+                        <li><a href="#">회사소개  </a></li>
+                        <li><a href="#"> 구독신청  </a></li>
+                        <li><a href="#"> 개인정보 처리방침 </a></li>
+                        <li><a href="#"> 전자금융거래약관  </a></li>
+                        <li><a href="#"> 광고 안내  </a></li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                </div>
+            <div id="moveToTopBox"><img src="image/moveToTop.png" id="moveToTop"></div>
+        </footer>
+    </div>
+    <!--wrap div 닫는 태그-->
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체 : Object()사용</title>
+    <script>
+        let person = new Object();
+
+        // property 추가
+        person.name = 'jeong';
+        person.age = 20;
+
+        // method 추가
+        person.getName = function(){
+            return this.name;
+        }
+
+        // 객체 사용 : 객체.프로퍼티 / 객체.메소드
+        console.log(person.age);
+        console.log(person.getName());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

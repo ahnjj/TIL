@@ -1,0 +1,37 @@
+/* 요일별기사 */
+
+#weeklyNews {
+	text-align: left; 
+	/* margin-left: 30px; */
+	height: 450px;
+    padding-top: 500px;
+}
+
+
+#weeklyItem a{
+	 /* 처음에 밑줄 없도록 설정 */
+	 text-decoration: none; 
+     color: black;
+     font-style: italic;
+     font-size: x-large;
+}
+#weeklyHeader {
+    width: 800px;
+}
+
+#weeklyHeader h1{
+    font: bold;
+    margin-top: 20px;
+    font-size: 30px;
+    padding-bottom: 7px;
+    border-bottom: solid #cccccc 1px;
+}
+
+#weeklyItem li{
+    font-weight: 600;
+    border-top: solid 1px #713b313d;
+    height: 60px;
+    margin-bottom: 4px;
+    padding: 13px 5px 13px 5px;
+    background-color: #f2f2f2;
+}

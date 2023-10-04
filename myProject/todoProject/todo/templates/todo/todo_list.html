@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h1>TODO list App</h1>
+    <p>
+        <a href="{% url 'todo_post' %}"><i class="bi bi-plus"></i>Add Todo</a>
+        <a href="{% url 'done_list' %}" class="btn btn-secondary" style="float: right">Completed List</a>
+    </p>
+    <ul class="list-group">
+        {% for todo in todos %}
+        <li class="list-group-item">
+            <a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.title }}</a>
+            {% if todo.important %}
+                <span class="badge text-bg-danger">!</span>
+            {% endif %}
+            <div style="float: right">
+                <a href="{% url 'todo_done' pk=todo.pk %}" class="btn btn-success">Completed</a>
+                <a href="{% url 'todo_edit' pk=todo.pk %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'destroy' pk=todo.pk %}" class="btn btn-danger">Delete</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

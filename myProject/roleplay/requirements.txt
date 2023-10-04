@@ -1,0 +1,26 @@
+# coding: utf-8
+# cli program audio play
+pygame==2.5.0
+
+django==4.2.1
+# python에서 환경변수 처리 쉽게
+python-dotenv==1.0.0
+
+# 장고에서 환경 변수 처리 쉽게
+django-environ==0.10.0
+
+# openai api
+openai==0.27.7
+
+# 장고에서 bootstrap5 사용 쉽게
+django-bootstrap5==23.1
+
+# HTTP요청/ HTML parser library
+requests
+beautifulsoup4
+
+# django channels library
+channels[daphne]~=4.0.0
+
+# google translation crawling audio create library
+gTTS==2.3.2

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 이벤트</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).resize(function(){
+                // 1. window크기 알아와서
+                let winWidth = $(window).width();       // jQuery에 있는 가로 세로 알려주는 메소드
+                let windHeight = $(window).height(); 
+
+                // <h3> 출력
+                    $('h3').text("윈도우 크기 : " + winWidth + " x " + windHeight);
+
+                // 2. 크기에 따라 색상값 변수에 저장
+                let bgColor;
+                if(winWidth >= 900)
+                    bgColor = 'green';
+                else if(winWidth >= 700)
+                    bgColor = 'yellow';
+                else
+                    bgColor = 'red';
+
+                // 3. 변수에 저장된 색상값에 따라 문서 배경색 변경
+                $('body').css('background-color', bgColor);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>window 크기: window크기를 변경해보세요</h3>
+    
+</body>
+</html>

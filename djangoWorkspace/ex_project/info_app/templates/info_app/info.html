@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index 페이지</title>
+    <link rel="stylesheet" href="{% static '/css/info.css' %}">
+    <script src="{% static '/js/info.js' %}"></script>
+    {% comment %} <script src="{% static 'bootstrap-5.3.2-dist/js/bootstrap.min.js' %}"> {% endcomment %}
+</head>
+<body>
+    <h2>여행 정보</h2> 
+    <img src="{% static '/images/jeju.jpg' %}"></br>
+    <button id="btn">제주 여행</button>
+</body>
+</html>

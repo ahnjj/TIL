@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>보드 입력 폼2</title>
+
+</head>
+<body>
+    <h2>데이터 입력 폼</h2> 
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <!-- {{ form.as_table}} -->
+        {% comment %} <table>
+            {{ form }}
+        </table> {% endcomment %}
+        <input type="submit" value="완료">    
+    </form>  
+</body>
+</html>

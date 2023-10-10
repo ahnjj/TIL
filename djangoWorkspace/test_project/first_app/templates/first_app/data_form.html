@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+
+</head>
+<body>
+    <h2> 데이터 입력 폼</h2>
+    <form action ="" method="post">
+        {% csrf_token %}
+        <!--주의! Name 속성 반드시 필요(없으면 서버로 데이터 전송 안됨)-->
+        이름 : <input type="text" name="name"><br>
+        나이 : <input type="text" name="age"><br>
+        <input type="submit" value="완료">
+
+    </form>
+</body>
+</html>

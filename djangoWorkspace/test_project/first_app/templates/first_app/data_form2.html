@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+
+</head>
+<body>
+    <h2> 데이터 입력 폼2 </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="완료">
+    </form>
+</body>
+</html>

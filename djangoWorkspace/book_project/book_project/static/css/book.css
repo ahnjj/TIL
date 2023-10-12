@@ -30,11 +30,11 @@ table {
   margin: 0 auto;
 }
 
-table#prd_list {
+table#book_list {
   border-bottom: brown;
 }
 
-table#prd_list th {
+table#book_list th {
   width: 100px;
   background-color: #dc3030;
   color: white;
@@ -42,7 +42,7 @@ table#prd_list th {
   line-height: 30px;
 }
 
-table#prd_list tr td {
+table#book_list tr td {
   border-bottom: red 1px dashed;
   height: 30px;
   line-height: 30px;
@@ -50,11 +50,11 @@ table#prd_list tr td {
 
 
 /* 도서 상세정보 조회 */
-table#prd_detail {
+table#book_detail {
   width: 500px;
 }
 
-table#prd_detail th {
+table#book_detail th {
   width: 100px;
   background-color: #dc3030;
   color: white;
@@ -65,7 +65,7 @@ table#prd_detail th {
 }
 
 
-table#prd_detail td {
+table#book_detail td {
   border: solid 1px black;
 }
 

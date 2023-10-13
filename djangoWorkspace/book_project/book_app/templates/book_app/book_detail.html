@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}   
+    <h2>도서 상세 조회</h2>
+    <table id="book_detail">
+        <tr><th>도서번호</th><td>{{ book.bookno }}</td></tr>
+        <tr><th>도서명</th><td>{{ book.bookname }}</td></tr>
+        <tr><th>저자명</th><td>{{ book.bookauthor }}</td></tr>
+        <tr><th>도서가격</th><td>{{ book.bookprice }}</td></tr>
+        <tr><th>출간날짜</th><td>{{ book.bookdate }}</td></tr>
+        <tr><th>도서재고</th><td>{{ book.bookstock }}</td></tr>
+        <tr><th>출판사</th><td>{{book.pubno}}</td></tr>
+    </table>
+{% endblock content %}

@@ -143,3 +143,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 AUTH_USER_MODEL = 'users_app.User'
+
+LANGUAGE_CODE = 'ko-kr'
+
+LOGIN_REDIRECT_URL = '/'

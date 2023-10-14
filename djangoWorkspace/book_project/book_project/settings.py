@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     # local apps
     'book_app',
+    'users_app',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'book_project','static')
 ]
+
+
+AUTH_USER_MODEL = 'users_app.User'
+
+# 프로필 만들기 전
+LOGIN_REDIRECT_URL = '/'

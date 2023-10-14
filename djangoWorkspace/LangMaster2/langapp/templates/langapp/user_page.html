@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row pt-3 pb-3">
+            <div class="col-sm-3" >
+                {% comment %} <img src="{{ user.avatar_url }}" class="rounded-circle"/>{% endcomment %}
+            </div>
+            <div class="col-sm-9">
+                {% comment %}
+                {{page_user.username}}
+                <a href="{% url "profile_edit" %}"> 
+                    Edit Proflie
+                </a> 
+                {{ page_user.name }}{% endcomment %}
+            </div>
+            <div class="col-sm-12">
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            {% for post in post_list %}  <!-- 단어 목록 -->
+                
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

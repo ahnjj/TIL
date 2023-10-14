@@ -1,0 +1,8 @@
+django~=3.0.0
+django-bootstrap5
+openai
+bs4
+requests
+gtts
+pygame
+dotenv

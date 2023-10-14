@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <h1>Complete List</h1>
+            <p>
+                <a href="{% url 'vocab_list' %}" class="btn btn-danger">Test!</a>
+            </p>
+            <ul class="list-group">
+                {% for complete in completes %}
+                <li class="list-group-item">
+                    <a href="{% url 'vocab_detail' pk=complete.pk %}" class="text-dark text-decoration-none">{{ complete.word_ko }} {{ complete.word_fo }} </a>
+                    {% if complete.important %}
+                        <span class="badge text-bg-danger">!</span>
+                    {% endif %}
+                    <div style="float: right">
+                        <a href="{% url 'uncompleted' pk=complete.pk %}" class="btn btn-outline-info">Uncomplete</a> 
+                        <a href="{% url 'vocab_edit' pk=complete.pk %}" class="btn btn-outline-secondary">Edit</a>
+                        <a href="{% url 'vocab_destroy' pk=complete.pk %}" class="btn btn-danger">Delete</a>
+                    </div>  
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

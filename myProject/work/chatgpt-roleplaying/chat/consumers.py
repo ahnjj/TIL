@@ -12,7 +12,9 @@ class RolePlayingRoomConsumer(JsonWebsocketConsumer):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.gpt_messages: List[GptMessage] = []
+        self.recommend_message = ""  # 추천 메세지
 
+    # 웹소켓 연결 요청을 받으면 호출됨
     def connect(self):
         room = self.get_room()
         if room is None:
@@ -20,12 +22,13 @@ class RolePlayingRoomConsumer(JsonWebsocketConsumer):
         else:
             self.accept()
 
-            self.gpt_messages = room.get_initial_messages()
-            # TODO: self._gpt_messages 기반으로 gpt api 호출.
-            print(f"{self.gpt_messages=}")
+            self.gpt_messages = room.get_initial_messages()   # 첫 메세지
+            self.recommend_message = room.get_recommend_message() # 추천 메세지
+            # print(f"{self.gpt_messages=}")
 
-        # 🔥 추가) 기존 self.gpt_messages 기반으로 GPT API 호출 응답을 웹클라이언트에게 전달합니다.
-            # openai api 호출 시에 예외가 발생하면 type=openai-error 응답을 주도록 합니다.
+            # 🔥기존 self.gpt_messages 기반으로 GPT API 호출
+            # gpt api 호출 응답을 웹클라이언트에게 전달.
+            # openai api 호출 시에 예외가 발생하면 type=openai-error 응답을 주도록 함.
             try:
                 assistant_message = self.gpt_query()
             except openai.error.OpenAIError as e:
@@ -78,12 +81,20 @@ class RolePlayingRoomConsumer(JsonWebsocketConsumer):
         # GPT API의 content 응답을 반환합니다. (assistant role?)
         return response_content
     
+     # 웹소켓 유저로부터 메시지를 받으면 receive_json 메서드가 호출됨
     def receive_json(self, content_dict, **kwargs):
         if content_dict["type"] == "user-message":
             assistant_message = self.gpt_query(user_query=content_dict["message"])
             self.send_json({
                 "type": "assistant-message",
                 "message": assistant_message,
+            })
+        # 추천메세지의 경우
+        elif content_dict['type'] == 'request-recommend-message':
+            recommended_message = self.gpt_query(command_query=self.recommend_message)
+            self.send_json({
+                "type":"recommended-message",
+                "message":recommended_message,
             })
         else:
             self.send_json({

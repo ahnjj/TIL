@@ -91,3 +91,37 @@ class RolePlayingRoom(models.Model):
             GptMessage(role="system", content=system_message),
             GptMessage(role="user", content=user_message),
         ]
+    
+    #대화 메세지 추천 받기
+    def get_recommend_message(self) -> str:
+        if self.level == self.Level.BEGINNER:
+            level_word = "simple"
+        elif self.level == self.Level.ADVANCED:
+            level_word = "advanced"
+        else:
+            raise ValueError(f"Invalid level : {self.level}")
+        
+        return (
+            f"Can you please provide me an {level_word} example "
+            f"of how to respond to the last sentence "
+            f"in this situation, without providing a translation "
+            f"and any introductory phrases or sentences."
+        )
+    
+    # 문법 교정 하기
+    # def get_correction(self) -> str:
+    #     if self.level == self.Level.BEGINNER:
+    #         level_word = "simple"
+    #     elif self.level == self.Level.ADVANCED:
+    #         level_word = "advanced"
+    #     else:
+    #         raise ValueError(f"Invalid level : {self.level}")
+        
+    #     return (
+    #         f"can you please give me grammatical correction"
+    #         f"or situational correction of the last sentence in this situation? please explain in Korean and give example in japanese."
+    #         f"Can you please provide me an {level_word} example "
+    #         f"of how to respond to the last sentence "
+    #         f"in this situation, without providing a translation "
+    #         f"and any introductory phrases or sentences."
+    #     )

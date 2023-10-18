@@ -1,0 +1,207 @@
+{% extends "chat/base.html" %}
+
+{% block extra-css %}
+<style>
+    #chat-message-list {
+        padding: 0;
+        list-style: none;
+    }
+    .chat-message .message {
+        background-color: #3b3b3d;
+        color: #e1e1e1;
+        border-radius: 0.8em;
+        padding: 0.4em;
+        margin: 0.4em 0;
+        display: inline-block;
+        white-space: pre-wrap;
+    }
+
+    .chat-message.me {
+        text-align: right;
+    }
+    .chat-message.me .message {
+        background-color: #1f8cff;
+        color: #fff;
+        text-align: left;
+    }
+    .chat-message .say {
+        display: block;
+        font-size: .8em;
+        margin-top: -0.4em;
+        margin-left: 0.2em;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    [{{ roleplayingroom.get_language_display }}
+                    {{ roleplayingroom.get_level_display }}]
+                    {{ roleplayingroom.situation }}
+                    ({{ roleplayingroom.gpt_role }}와 {{ roleplayingroom.my_role }}의 대화)
+                </div>
+                <div class="card-body">
+                    <ul id="chat-message-list"></ul>
+                </div>
+                <div class="card-footer">
+                    <div class="d-grid gap-2 mb-2">
+                        <button class="btn btn-primary" id="auto-play-button">
+                            자동 읽기 시작
+                        </button>
+                    </div>
+                    <select id="voice-list" class="form-select mb-2"></select>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-secondary" id="recommend-button">추천받기</button>
+                        <form id="message-form" class="d-flex gap-1 flex-grow-1">
+                            <input type="text"
+                                   name="message"
+                                   placeholder="메시지를 입력하세요."
+                                   class="form-control flex-grow-1" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-3">
+        <a href="{% url 'role_playing_room_edit' roleplayingroom.pk %}"
+           class="btn btn-primary">수정</a>
+        {# 🔥 HERE #}
+        <a href="{% url 'role_playing_room_delete' roleplayingroom.pk %}"
+           class="btn btn-danger">삭제</a>
+    </div>
+{% endblock %}
+
+{% block script %}
+{{ roleplayingroom.pk|json_script:"room-pk" }}
+{{ roleplayingroom.language|json_script:"room-language" }}
+
+<script>
+
+function addMessage(message, isMe) {
+    const messageList = document.getElementById("chat-message-list");
+    const messageElement = document.createElement("li");
+    messageElement.className = "chat-message" + (isMe ? " me" : "");
+    messageElement.innerHTML = `
+        <span class="message">${message}</span>
+        <span class="say">읽어주기</span>
+    `;
+    messageList.appendChild(messageElement);
+    messageList.scrollTop = messageList.scrollHeight;
+
+    messageElement.querySelector(".say").addEventListener("click", () => {
+        sayMessage(message);
+    });
+}
+
+function sayMessage(message) {
+    const voiceListSelect = document.querySelector("#voice-list");
+    const option = voiceListSelect.options[voiceListSelect.selectedIndex];
+    const voiceName = option.value;
+    const voice = window.speechSynthesis.getVoices()
+        .find(voice => voice.name === voiceName);
+
+    const utterance = new SpeechSynthesisUtterance(message);
+    utterance.voice = voice;
+    utterance.lang = voice.lang;
+
+    utterance.addEventListener("error", (e) => {
+        alert(`error : ${e.error}`);
+    });
+
+    window.speechSynthesis.speak(utterance);
+}
+
+(function() {
+    const room_pk = document.querySelector("#room-pk").textContent;
+    const room_language = JSON.parse(document.querySelector("#room-language").textContent);
+    let is_auto_play = false;
+
+    const ws = new WebSocket(`ws://${window.location.host}/ws/chat/${room_pk}/`);
+
+    ws.onopen = function(e) { console.log("장고 채널스 서버와 웹소켓 연결되었습니다."); };
+    ws.onclose = function(e) { console.log('장고 채널스 서버와 웹소켓 연결이 끊어졌습니다.'); };
+    ws.onerror = function(e) { console.error("장고 채널스 서버와의 웹소켓 연결 중에 오류가 발생했습니다.", e); };
+    // 서버로부터 웹소켓 메시지를 받았을 때 호출되는 함수.
+    ws.onmessage = function(e) {
+        console.group("[onmessage]");
+        // console.log(typeof e.data);
+        // console.log(e.data);
+
+        const message_obj = JSON.parse(e.data);
+
+        if ( message_obj.type === "assistant-message" ) {
+            const { message } = message_obj;
+            console.log("assistant-message:", message);
+            // 채팅 UI에 메시지를 추가하는 코드.
+            addMessage(message, false);  // ⭐️ 추가됨
+            if(is_auto_play) {
+                sayMessage(message);
+            }
+        }
+        else if ( message_obj.type === "recommended-message" ) {
+            const { message } = message_obj;
+            console.log("recommended-message:", message);
+            document.querySelector("#message-form [name='message']").value = message;
+            recommendButton.disabled = false;
+        }
+        else if ( message_obj.type === "openai-error" ) {
+            const { message } = message_obj;
+            alert(`Error: ${message}`);
+        }
+        else {
+            console.error("알 수 없는 메시지 타입입니다.", message_obj);
+        }
+
+        console.groupEnd();
+    };
+
+    const recommendButton = document.querySelector("#recommend-button");
+    recommendButton.addEventListener("click", () => {
+        recommendButton.disabled = true;
+        ws.send(JSON.stringify({ type: "request-recommend-message" }));
+    });
+
+    const messageForm = document.getElementById("message-form");
+    messageForm.onsubmit = function(e) {
+        e.preventDefault();
+        const message = e.target.message.value.trim();
+        if(message.length > 0) {
+            // 서버로 웹소켓 메시지를 전송하는 코드.
+            //  - 서버 단에서 "전달받은 문자열"을 JSON 디코딩하므로
+            //  - 클라이언트 단에서 JSON 인코딩한 문자열을 웹소켓으로 전달
+            addMessage(message, true);
+            ws.send(JSON.stringify({ type: "user-message", message: message }));  // 🔥 HERE
+            e.target.reset();
+        }
+    };
+
+    const autoPlayButton = document.querySelector("#auto-play-button");
+    autoPlayButton.addEventListener("click", () => {
+        is_auto_play = true;
+        autoPlayButton.remove();
+    });
+
+    // 이 코드는 페이지가 처음 로드되었을 때 사용 가능한 음성이 로드되어야 하므로, voiceschanged 이벤트를 기다립니다.
+    // Chrome과 Edge브라우저에서는 동작을 확인했지만, Safari에서는 이벤트가 발생하지 않았습니다.
+    window.speechSynthesis.onvoiceschanged = function() {
+        // getVoices 메서드를 사용하여 사용 가능한 모든 음성을 가져옵니다.
+        const voices = window.speechSynthesis.getVoices();
+
+        voices.forEach(({ name, lang }) => {
+            if ( lang.toLowerCase() === room_language.toLowerCase() ) {
+                const option = document.createElement("option");
+                option.value = name;
+                option.textContent = name;
+                option.selected = true;  // 마지막 음성을 선택합니다.
+                document.querySelector("#voice-list").appendChild(option);
+            }
+        })
+    };
+})();
+</script>
+{% endblock %}

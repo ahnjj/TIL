@@ -41,3 +41,5 @@ class RolePlayingRoomForm(forms.ModelForm):
         if not translated:
             raise forms.ValidationError("구글 번역을 할 수 없습니다.")     # 유효성검사
         return translated
+    
+  

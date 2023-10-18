@@ -10,7 +10,7 @@ from django.views.generic import CreateView, UpdateView, ListView, DetailView, D
 from chat.forms import RolePlayingRoomForm
 from chat.models import RolePlayingRoom
 
-
+# 채팅방 생성뷰
 # 아직 로그인 기능을 구현하지 않았기에, login_required 대신 admin 앱의 로그인 기능을 활용토록 합니다.
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomCreateView(CreateView):
@@ -28,6 +28,8 @@ class RolePlayingRoomCreateView(CreateView):
 
 role_playing_room_new = RolePlayingRoomCreateView.as_view()
 
+
+# 수정뷰
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomUpdateView(UpdateView):
     model = RolePlayingRoom
@@ -47,6 +49,7 @@ class RolePlayingRoomUpdateView(UpdateView):
 
 role_playing_room_edit = RolePlayingRoomUpdateView.as_view()
 
+# 전체 조회 뷰
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomListView(ListView):
     model = RolePlayingRoom
@@ -60,6 +63,7 @@ class RolePlayingRoomListView(ListView):
 role_playing_room_list = RolePlayingRoomListView.as_view()
 
 
+# 개별 채팅방 상세 조회 뷰
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomDetailView(DetailView):
     model = RolePlayingRoom
@@ -72,6 +76,8 @@ class RolePlayingRoomDetailView(DetailView):
 
 role_playing_room_detail = RolePlayingRoomDetailView.as_view()
 
+
+# 채팅방 삭제 뷰
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomDeleteView(DeleteView):
     model = RolePlayingRoom
@@ -89,3 +95,7 @@ class RolePlayingRoomDeleteView(DeleteView):
 
 
 role_playing_room_delete = RolePlayingRoomDeleteView.as_view()
+
+# 채팅 메세지 저장 뷰
+# def save_message(request):
+#     if request.method == "POST":

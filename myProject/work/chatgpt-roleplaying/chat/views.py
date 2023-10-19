@@ -16,6 +16,7 @@ from chat.models import RolePlayingRoom
 class RolePlayingRoomCreateView(CreateView):
     model = RolePlayingRoom
     form_class = RolePlayingRoomForm
+    template_name = "chat/roleplayingroom_form.html"   # 추가
     # success_url = reverse_lazy("role_playing_room_new")  # 페이지 성공 후에 이동할 페이지 주소 지정
 
     def form_valid(self, form):
@@ -25,7 +26,6 @@ class RolePlayingRoomCreateView(CreateView):
         messages.success(self.request, "새로운 채팅방을 생성했습니다.")
         return response
 
-
 role_playing_room_new = RolePlayingRoomCreateView.as_view()
 
 
@@ -34,11 +34,11 @@ role_playing_room_new = RolePlayingRoomCreateView.as_view()
 class RolePlayingRoomUpdateView(UpdateView):
     model = RolePlayingRoom
     form_class = RolePlayingRoomForm
-    # success_url = reverse_lazy("role_playing_room_new")
+    # success_url = reverse_lazy("role_playing_room_new")  # 이동할 페이지
 
     def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.filter(user=self.request.user)
+        qs = super().get_queryset()   # queryset 다읽어오기
+        qs = qs.filter(user=self.request.user) # 그중에서 해당 유저의 것만 필터링
         return qs
 
     def form_valid(self, form):
@@ -53,6 +53,9 @@ role_playing_room_edit = RolePlayingRoomUpdateView.as_view()
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomListView(ListView):
     model = RolePlayingRoom
+    template_name = "chat/roleplayingroom_list.html" # 추가- 없어도됨
+    paginate_by = 3   # 🔥paging - 다음 페이지로 어떻게 넘어가지
+    page_kwarg = 'page'  # 🔥paging
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -67,6 +70,7 @@ role_playing_room_list = RolePlayingRoomListView.as_view()
 @method_decorator(staff_member_required, name="dispatch")
 class RolePlayingRoomDetailView(DetailView):
     model = RolePlayingRoom
+    template_name = "chat/roleplayingroom_detail.html" # 추가 없어도됨
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -82,6 +86,7 @@ role_playing_room_detail = RolePlayingRoomDetailView.as_view()
 class RolePlayingRoomDeleteView(DeleteView):
     model = RolePlayingRoom
     success_url = reverse_lazy("role_playing_room_list")
+    template_name = "chat/roleplayingroom_confirm_delete.html"
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -96,6 +101,5 @@ class RolePlayingRoomDeleteView(DeleteView):
 
 role_playing_room_delete = RolePlayingRoomDeleteView.as_view()
 
-# 채팅 메세지 저장 뷰
-# def save_message(request):
-#     if request.method == "POST":
+
+# 함수형 뷰로 만들어보기

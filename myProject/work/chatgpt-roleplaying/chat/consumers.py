@@ -89,7 +89,7 @@ class RolePlayingRoomConsumer(JsonWebsocketConsumer):
                 "type": "assistant-message",
                 "message": assistant_message,
             })
-        # 추천메세지의 경우
+        # 추천요청 처리(서버)
         elif content_dict['type'] == 'request-recommend-message':
             recommended_message = self.gpt_query(command_query=self.recommend_message)
             self.send_json({

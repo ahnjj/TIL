@@ -74,6 +74,8 @@ class RolePlayingRoom(models.Model):
             f"Your name is {gpt_name}. "
             f"Please assume that the user you are assisting is {level_string}. "
             f"And please write only the sentence without the character role."
+            f"And if user's answer has a grammatical error, please fix it."
+            f"You should fix the grammar error starting with this sentence: '문법 교정:'"
         )
         
         user_message = (
@@ -108,20 +110,3 @@ class RolePlayingRoom(models.Model):
             f"and any introductory phrases or sentences."
         )
     
-    # 문법 교정 하기
-    # def get_correction(self) -> str:
-    #     if self.level == self.Level.BEGINNER:
-    #         level_word = "simple"
-    #     elif self.level == self.Level.ADVANCED:
-    #         level_word = "advanced"
-    #     else:
-    #         raise ValueError(f"Invalid level : {self.level}")
-        
-    #     return (
-    #         f"can you please give me grammatical correction"
-    #         f"or situational correction of the last sentence in this situation? please explain in Korean and give example in japanese."
-    #         f"Can you please provide me an {level_word} example "
-    #         f"of how to respond to the last sentence "
-    #         f"in this situation, without providing a translation "
-    #         f"and any introductory phrases or sentences."
-    #     )

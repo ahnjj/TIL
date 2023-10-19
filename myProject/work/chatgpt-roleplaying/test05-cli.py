@@ -83,10 +83,10 @@ def gpt_query(user_query: str = "", skip_save: bool = False) -> str:
     return assistant_message
 
 
-# # 첫 응답 받기
-# if __name__ == "__main__":
-#     first_response = gpt_query()
-#     print(first_response)
+# 첫 응답 받기
+if __name__ == "__main__":
+    first_response = gpt_query()
+    print(first_response)
 
 
 def play_file(file_path: str):

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speech-to-text</title>
+</head>
+<body>
+    <button id="start">음성인식 시작</button>
+    <button id="stop">음성인식 멈추기</button>
+
+</body>
+<script>
+    // const speech = new webkitSpeechRecognition;
+    // chrome에서만 가능하다고 말한다.
+    if(!("webkitSpeechRecognition" in window)){
+        alert("크롬 브라우저에서만 지원됩니다.");
+    }else{
+        const speech = new webkitSpeechRecognition;
+
+        // start 눌렀을때
+        document.getElementById("start").addEventListener("click", () =>{
+            speech.start();
+        })
+        // stop 눌렀을때
+        document.getElementById("stop").addEventListener("click", () => {
+            speech.stop();
+        })
+        // speech-to-text 결과 출력
+        speech.addEventListener("result", (event) =>{
+            console.log(event);
+
+        });
+    }
+
+</script>
+</html>

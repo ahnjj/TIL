@@ -94,6 +94,15 @@
                                    class="form-control flex-grow-1" />
                         </form>
                     </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-secondary" id="translate-button">내가 쓴 말 뜻 알기</button>
+                        <form id="message-form" class="d-flex gap-1 flex-grow-1">
+                            <input type="text"
+                                   name="message"
+                                   placeholder="메시지를 입력하세요."
+                                   class="form-control flex-grow-1" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -304,6 +313,29 @@
     //     });
     // }
    
+
+    // 번역해주는 기능
+    // const translateButton = document.querySelector("#translate-button");
+    // translateButton.addEventListener("click", ()=>{
+    //     // test
+    //     console.log('translate test');
+
+    //     const { spawn } = require('child_process');
+
+    //     // 2. spawn을 통해 "python 파이썬파일.py" 명령어 실행
+    //     const result = spawn('python', ['translators.py', text,'auto', 'en']);
+
+    //     // 3. stdout의 'data'이벤트리스너로 실행결과를 받는다.
+    //     result.stdout.on('data', function(data) {
+    //         const data = JSON.parse(data.toString()); // toString안하면 Buffer출력됨
+    //         console.log(data);   
+    //     }) 
+
+    //     result.stderr.on('data', function(data){
+    //         console.error(`Error: ${data}`);
+    //     });
+    // });
+
 
 })();
 </script>

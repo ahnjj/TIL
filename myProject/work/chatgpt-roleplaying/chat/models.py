@@ -110,3 +110,18 @@ class RolePlayingRoom(models.Model):
             f"and any introductory phrases or sentences."
         )
     
+    # 🔥 동의어 / 유사어 
+    # 아직 구현중
+    def get_synonym_message(self, word) -> str:
+        if self.level == self.Level.BEGINNER:
+            level_word = "simple"
+        elif self.level == self.Level.ADVANCED:
+            level_word = "advanced"
+        else:
+            raise ValueError(f"Invalid level : {self.level}")
+        
+        return (
+            f"Can you please provide me an {level_word} example "
+            f"of synonym of word {word}"
+        )
+    
